@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Note & Receipt Note - Tally Prime (With Practice Entries)</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tally Prime with Accounts & Inventory</h1>
+            <p>Delivery Note & Receipt Note<br><strong>Connected with Orders + 5 Practice Entries Each (2025)</strong></p>
+        </header>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#intro">1. Introduction – Delivery & Receipt Notes</a></li>
+                <li><a href="#flow">2. Order → DN/RN → Sales/Purchase Flow</a></li>
+                <li><a href="#enable">3. How to Enable DN & RN</a></li>
+                <li><a href="#delivery-note">4. Delivery Note (DN)</a></li>
+                <li><a href="#dn-entries">4.4 5 Practice Delivery Note Entries</a></li>
+                <li><a href="#receipt-note">5. Receipt Note (RN)</a></li>
+                <li><a href="#rn-entries">5.4 5 Practice Receipt Note Entries</a></li>
+                <li><a href="#reports">6. Reports After DN & RN</a></li>
+                <li><a href="#linking">7. Linking DN/RN to Sales/Purchase Vouchers</a></li>
+            </ul>
+        </div>
+
+        <main>
+            <section id="intro">
+                <h2>1. Introduction – What are Delivery & Receipt Notes?</h2>
+                <table>
+                    <tr><th>Voucher</th><th>Purpose</th></tr>
+                    <tr><td>Delivery Note (DN)</td><td>Records goods <strong>delivered</strong> to customer</td></tr>
+                    <tr><td>Receipt Note (RN)</td><td>Records goods <strong>received</strong> from supplier</td></tr>
+                </table>
+                <p>These are <strong>Inventory Vouchers</strong> — update stock but do <strong>not</strong> affect accounting until Sales/Purchase is recorded.</p>
+            </section>
+
+            <section id="flow">
+                <h2>2. Step-by-Step Flow</h2>
+                <p><strong>Outward Supply:</strong> Sales Order → <strong>Delivery Note</strong> → Sales Voucher</p>
+                <p><strong>Inward Supply:</strong> Purchase Order → <strong>Receipt Note</strong> → Purchase Voucher</p>
+                <p>Benefits: Accurate stock tracking, dispatch vs billing separation, warehouse-friendly</p>
+            </section>
+
+            <section id="enable">
+                <h2>2. Enabling DN/RN Vouchers — Practical Setup</h2>
+                <p><strong>Gateway of Tally → Masters → Alter → Accounting Masters → Voucher Type → Delivery Note → Activate this Voucher Type → Yes</strong></p>
+                <h3>Alternate Way</h3>
+                <p><strong>Gateway of Tally → Transactions → Vouchers → F10/Other Vouchers → Show Inactive → Inventory Vouchers → Delivery Note → Activate → Yes</strong></p><br>Same for Receipt Note
+            </section>
+
+            <section id="delivery-note">
+                <h2>4. Delivery Note (DN) – Theory + Practical</h2>
+                <h3>4.1 Overview</h3>
+                <p>Used when goods are <strong>dispatched</strong> to customer. Reduces stock immediately.</p>
+                <h3>4.2 Create Delivery Note</h3>
+                <p>Gateway → Vouchers → <kbd>Alt + F8</kbd></p>
+            </section>
+
+            <section id="dn-entries">
+                <h2>4.4 5 Practice Delivery Note Entries</h2>
+                <div class="practice-entry">
+                    <strong>Entry 1 – Against Sales Order</strong><br>
+                    Customer: Star Computers | Item: Dell Laptop | Qty: 4 Nos | Link to SO
+                </div>
+                <div class="practice-entry">
+                    <strong>Entry 2 – Partial Delivery</strong><br>
+                    Customer: Modern Retail | Item: Office Table | Qty: 5 Nos  (out of 10)
+                </div>
+                <div class="practice-entry">
+                    <strong>Entry 3 – Full Delivery</strong><br>
+                    Customer: City Mart | Item: Samsung A15 | Qty: 15 Nos 
+                </div>
+                <div class="practice-entry">
+                    <strong>Entry 4 – Multi-Item Delivery</strong><br>
+                    Customer: Super Stationery | Item: A4 Paper Box | Qty: 25 Boxes <br>
+                    Customer: JP Enterprises | Item: LED Monitor 22” | Qty: 8 Nos 
+                </div>
+                <div class="practice-entry">
+                    <strong>Entry 5 – Direct Dispatch (No SO)</strong><br>
+                    Customer: XYZ Enterprises | Item: Printer | Qty: 1
+                </div>
+            </section>
+
+            <section id="receipt-note">
+                <h2>5. Receipt Note (RN) – Theory + Practical</h2>
+                <h3>5.1 Overview</h3>
+                <p>Used when goods are <strong>received</strong> from supplier. Increases stock immediately.</p>
+                <h3>5.2 Create Receipt Note</h3>
+                <p>Gateway → Vouchers → <kbd>Alt + F9</kbd></p>
+            </section>
+
+            <section id="rn-entries">
+                <h2>5.4 5 Practice Receipt Note Entries</h2>
+                <div class="practice-entry">
+                    <strong>Entry 1 – Against Purchase Order</strong><br>
+                    Supplier: ABC Components | Item: Computer Mouse | Qty: 50 | Link to PO
+                </div>
+                <div class="practice-entry">
+                    <strong>Entry 2 – Partial Receipt</strong><br>
+                    Supplier: TechZone | HP Laptop i5 | Qty Received: 7 (out of 10)
+                </div>
+                <div class="practice-entry">
+                    <strong>Entry 3 – Linked Receipt</strong><br>
+                    Supplier: OfficeMart | Office Chair | Qty: 20
+                </div>
+                <div class="practice-entry">
+                    <strong>Entry 4 – Multi-Item Receipt</strong><br>
+                    Supplier: Grocery Wholesale | Basmati Rice | Qty: 100 Kg <br>
+                    Supplier: Mobile Hub | Samsung A15 | Qty: 12 Nos 
+                </div>
+                <div class="practice-entry">
+                    <strong>Entry 5 – Direct Receipt (No PO)</strong><br>
+                    Supplier: Orion Computers | Hard Disk 1TB | Qty: 2
+                </div>
+            </section>
+
+            <section id="reports">
+                <h2>6. Reports Used After DN & RN</h2>
+                <table>
+                    <tr><th>Report</th><th>Purpose</th></tr>
+                    <tr><td>Outstanding Sales Orders</td><td>Pending deliveries</td></tr>
+                    <tr><td>Outstanding Purchase Orders</td><td>Pending receipts</td></tr>
+                    <tr><td>Movement Analysis</td><td>Inward/Outward stock</td></tr>
+                    <tr><td>Godown Summary</td><td>Updated stock values</td></tr>
+                </table>
+            </section>
+
+            <section id="linking">
+                <h2>7. Linking DN/RN to Sales/Purchase Vouchers</h2>
+                <p>When creating <strong>Sales Voucher</strong>:<br>
+                → Choose “<strong>Bring All Pending Tracking Numbers</strong>” → Auto-fills items from Delivery Note</p>
+                <p>When creating <strong>Purchase Voucher</strong>:<br>
+                → Choose “<strong>Bring All Pending Tracking Numbers</strong>” → Auto-fills from Receipt Note</p>
+            </section>
+        </main>
+
+        <div class="nav-links">
+            <a href="Purchase-Order-&-Sales-Order.html">← Previous Topic</a>
+            <a href="Rejection-In-&-Rejection-Out.html">Next Topic →</a>
+        </div>
+
+        <footer>
+            <p>© 2025 Tally Prime Learning Series • Made with ❤️ for Students & Professionals</p>
+        </footer>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </div>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>

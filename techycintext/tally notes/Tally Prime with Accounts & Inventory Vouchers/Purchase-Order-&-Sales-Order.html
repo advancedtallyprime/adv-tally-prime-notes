@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Order & Sales Order - Tally Prime</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Purchase Order & Sales Order (Tally Prime)</h1>
+            <p>Theory + Practical Guide (2025 Edition)</p>
+        </header>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#objectives">A. Learning Objectives</a></li>
+                <li><a href="#theory">B. Theory Section – In-depth Explanation</a></li>
+                <li><a href="#activation">C. Activating Voucher Types in Tally Prime</a></li>
+                <li><a href="#practical">D. Practical Section – Step by Step</a></li>
+                <li><a href="#examples">E. Example Voucher Entries</a></li>
+                <li><a href="#mistakes">F. Common Mistakes & Tips</a></li>
+                <li><a href="#practice">G. Practice Exercises – 5 Voucher Entries</a></li>
+                <li><a href="#summary">H. Summary</a></li>
+                <li><a href="#review">I. Optional: Review Questions</a></li>
+            </ul>
+        </div>
+
+        <main>
+            <section id="objectives">
+                <h2>A. Learning Objectives</h2>
+                <p>By the end of this lesson, the learner will be able to:</p>
+                <ol>
+                    <li>Understand what Purchase Order (PO) and Sales Order (SO) are and why they are used.</li>
+                    <li>Understand the impact of PO/SO on inventory and accounts.</li>
+                    <li>Activate voucher types in new Tally Prime interface.</li>
+                    <li>Create Purchase Order and Sales Order vouchers step by step.</li>
+                    <li>Enter realistic example vouchers and complete practice tasks to reinforce learning.</li>
+                    <li>Identify common mistakes and apply tips for accurate voucher entry.</li>
+                </ol>
+            </section>
+
+            <section id="theory">
+                <h2>B. Theory Section – In-depth Explanation</h2>
+                <h3>1. Purchase Order (PO)</h3>
+                <ul>
+                    <li><strong>Definition:</strong> A Purchase Order is a formal document sent to a supplier requesting the supply of goods at agreed rates and quantities.</li>
+                    <li><strong>Purpose:</strong>
+                        <ul>
+                            <li>Confirms intention to purchase.</li>
+                            <li>Helps manage inventory planning.</li>
+                            <li>Locks the supplier rate and terms.</li>
+                            <li>Acts as a reference for Goods Receipt Notes (GRN) and Purchase Invoices.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Accounting Impact:</strong>
+                        <ul>
+                            <li>No immediate ledger impact.</li>
+                            <li>Inventory is not affected until goods are received (GRN).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Business Scenario:</strong> A company wants to purchase 50 chairs from a supplier. It sends a PO to confirm order details before delivery.</li>
+                </ul>
+
+                <h3>2. Sales Order (SO)</h3>
+                <ul>
+                    <li><strong>Definition:</strong> A Sales Order is a confirmation document sent to a customer for goods to be delivered at a specified date, quantity, and price.</li>
+                    <li><strong>Purpose:</strong>
+                        <ul>
+                            <li>Confirms sales commitments.</li>
+                            <li>Helps in inventory planning and production scheduling.</li>
+                            <li>Provides tracking of pending sales.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Accounting Impact:</strong>
+                        <ul>
+                            <li>No immediate ledger or inventory impact.</li>
+                            <li>Inventory is updated when the Delivery Note or Invoice is created.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Business Scenario:</strong> A company receives an order from a customer for 20 laptops. An SO is created to confirm quantity, price, and delivery schedule.</li>
+                </ul>
+
+                <h3>3. Difference Between PO and SO</h3>
+                <table>
+                    <tr><th>Feature</th><th>Purchase Order (PO)</th><th>Sales Order (SO)</th></tr>
+                    <tr><td>Purpose</td><td>Buying goods from supplier</td><td>Selling goods to customer</td></tr>
+                    <tr><td>Initiated By</td><td>Buyer</td><td>Seller</td></tr>
+                    <tr><td>Immediate Ledger Effect</td><td>No</td><td>No</td></tr>
+                    <tr><td>Inventory Impact</td><td>No</td><td>No</td></tr>
+                    <tr><td>Used For</td><td>Procurement planning</td><td>Sales planning & tracking</td></tr>
+                </table>
+
+                <h3>4. Voucher Flow / Lifecycle</h3>
+                <p><strong>Purchase Cycle:</strong><br>PO → GRN (Goods Received Note) → Purchase Invoice → Payment</p>
+                <p><strong>Sales Cycle:</strong><br>SO → Delivery Note (DN) → Sales Invoice → Receipt</p>
+                <p>✅ PO & SO are planning vouchers, not accounting vouchers. They track commitments, not transactions.</p>
+
+                <h3>5. Ledger & Stock Requirements</h3>
+                <p>Before creating PO/SO:</p>
+                <ul>
+                    <li>Supplier Ledger or Customer Ledger must be created.</li>
+                    <li>Stock Items must exist with proper units of measure.</li>
+                    <li>Enable Inventory and Accounts Features in F11 if not already.</li>
+                </ul>
+            </section>
+
+            <section id="activation">
+                <h2>C. Activating Voucher Types in Tally Prime (Mandatory)</h2>
+                <p>In new Tally Prime, PO & SO are not active by default. There are two ways to activate them:</p>
+                <h3>Option 1 – Through Masters</h3>
+                <ol>
+                    <li>Gateway of Tally → Masters → Alter → Accounting Masters</li>
+                    <li>Select Voucher Type → Purchase Order</li>
+                    <li>Activate → Yes</li>
+                    <li>Repeat for Sales Order</li>
+                </ol>
+                <h3>Option 2 – Through Transactions</h3>
+                <ol>
+                    <li>Gateway of Tally → Transactions → Vouchers</li>
+                    <li>Press F10 / Other Vouchers → Show Inactive</li>
+                    <li>Select Inventory Vouchers → Purchase Order → Activate → Yes</li>
+                    <li>Repeat for Sales Order</li>
+                </ol>
+                <p>✅ Tip: Always activate PO & SO before creating entries to avoid errors.</p>
+            </section>
+
+            <section id="practical">
+                <h2>D. Practical Section – Step by Step with Details</h2>
+                <h3>1. Creating a Purchase Order</h3>
+                <ol>
+                    <li>Gateway of Tally → Inventory Vouchers → F9: Purchase Order</li>
+                    <li>Supplier Ledger: Select the supplier from whom you are ordering.</li>
+                    <li>Order Number: Enter a unique identifier, e.g., PO-001.</li>
+                    <li>Date: Enter order date.</li>
+                    <li>Stock Items:
+                        <ul>
+                            <li>Select items from the stock list.</li>
+                            <li>Enter Quantity and Rate.</li>
+                            <li>Total amount will auto-calculate.</li>
+                        </ul>
+                    </li>
+                    <li>Narration: Optional description, e.g., “Ordering 5 laptops for office use.”</li>
+                    <li>Press Enter → Save</li>
+                </ol>
+
+                <h3>2. Creating a Sales Order</h3>
+                <ol>
+                    <li>Gateway of Tally → Inventory Vouchers → F8: Sales Order</li>
+                    <li>Customer Ledger: Select the customer.</li>
+                    <li>Order Number & Date: Fill appropriately.</li>
+                    <li>Stock Items: Add items, quantity, rate, and check total.</li>
+                    <li>Narration: Optional description, e.g., “Sale of 3 laptops to XYZ Traders.”</li>
+                    <li>Press Enter → Save</li>
+                </ol>
+                <p>✅ Tip: Always check ledger, stock, and quantity before saving.</p>
+            </section>
+
+            <section id="examples">
+                <h2>E. Example Voucher Entries (Fully Detailed)</h2>
+                <h3>Purchase Order</h3>
+                <table>
+                    <tr><th>Field</th><th>Entry</th><th>Explanation</th></tr>
+                    <tr><td>Supplier</td><td>ABC Suppliers</td><td>Ledger must exist</td></tr>
+                    <tr><td>Order No</td><td>PO-001</td><td>Unique identifier</td></tr>
+                    <tr><td>Date</td><td>27-11-2025</td><td>Date of order</td></tr>
+                    <tr><td>Item</td><td>Laptop</td><td>Stock item created</td></tr>
+                    <tr><td>Quantity</td><td>5</td><td>Number of units</td></tr>
+                    <tr><td>Rate</td><td>₹50,000</td><td>Unit price</td></tr>
+                    <tr><td>Total</td><td>₹2,50,000</td><td>Auto-calculated</td></tr>
+                    <tr><td>Narration</td><td>Ordering 5 laptops for office use</td><td>Optional</td></tr>
+                </table>
+
+                <h3>Sales Order</h3>
+                <table>
+                    <tr><th>Field</th><th>Entry</th><th>Explanation</th></tr>
+                    <tr><td>Customer</td><td>XYZ Traders</td><td>Ledger must exist</td></tr>
+                    <tr><td>Order No</td><td>SO-001</td><td>Unique identifier</td></tr>
+                    <tr><td>Date</td><td>27-11-2025</td><td>Date of order</td></tr>
+                    <tr><td>Item</td><td>Laptop</td><td>Stock item created</td></tr>
+                    <tr><td>Quantity</td><td>3</td><td>Number of units</td></tr>
+                    <tr><td>Rate</td><td>₹55,000</td><td>Unit price</td></tr>
+                    <tr><td>Total</td><td>₹1,65,000</td><td>Auto-calculated</td></tr>
+                    <tr><td>Narration</td><td>Sale of 3 laptops to XYZ Traders</td><td>Optional</td></tr>
+                </table>
+            </section>
+
+            <section id="mistakes">
+                <h2>F. Common Mistakes & Tips</h2>
+                <ol>
+                    <li><strong>Mistake:</strong> PO/SO not showing in voucher menu → <strong>Solution:</strong> Activate voucher type.</li>
+                    <li><strong>Mistake:</strong> Wrong supplier/customer selected → <strong>Solution:</strong> Always verify ledger.</li>
+                    <li><strong>Mistake:</strong> Quantity or rate mismatch → <strong>Solution:</strong> Double-check stock items before saving.</li>
+                    <li><strong>Tip:</strong> Use meaningful Order No for tracking.</li>
+                    <li><strong>Tip:</strong> Include narration for future reference.</li>
+                </ol>
+            </section>
+
+            <section id="practice">
+                <h2>G. Practice Exercises – 5 Voucher Entries</h2>
+                <h3>Task 1 – Purchase Order</h3>
+                <ul>
+                    <li>Supplier: Global Tech</li>
+                    <li>Item: Printer</li>
+                    <li>Quantity: 10</li>
+                    <li>Rate: ₹8,000</li>
+                </ul>
+
+                <h3>Task 2 – Purchase Order</h3>
+                <ul>
+                    <li>Supplier: Office Essentials</li>
+                    <li>Item: Chair</li>
+                    <li>Quantity: 15</li>
+                    <li>Rate: ₹3,500</li>
+                </ul>
+
+                <h3>Task 3 – Sales Order</h3>
+                <ul>
+                    <li>Customer: MegaMart</li>
+                    <li>Item: Printer</li>
+                    <li>Quantity: 5</li>
+                    <li>Rate: ₹10,000</li>
+                </ul>
+
+                <h3>Task 4 – Sales Order</h3>
+                <ul>
+                    <li>Customer: Star Traders</li>
+                    <li>Item: Chair</li>
+                    <li>Quantity: 10</li>
+                    <li>Rate: ₹4,000</li>
+                </ul>
+
+                <h3>Task 5 – Combined PO & SO</h3>
+                <ul>
+                    <li>PO: 20 Keyboards @ ₹500 (Supplier: TechWorld)</li>
+                    <li>SO: 12 Keyboards @ ₹600 (Customer: OfficeHub)</li>
+                </ul>
+                <p>✅ Tip: After entering practice vouchers, check Outstanding Reports → Orders to verify pending POs/SOs.</p>
+            </section>
+
+            <section id="summary">
+                <h2>H. Summary</h2>
+                <ul>
+                    <li>PO & SO are planning vouchers, not accounting vouchers.</li>
+                    <li>Always activate voucher type in the new Tally Prime interface.</li>
+                    <li>Practice with realistic data to gain confidence in ledger, stock, and order tracking.</li>
+                    <li>Use narration and unique order numbers for easier reporting.</li>
+                </ul>
+            </section>
+
+            <section id="review">
+                <h2>I. Optional: Review Questions</h2>
+                <ol>
+                    <li>What is the difference between a PO and a SO?</li>
+                    <li>Does creating a PO affect ledger balances immediately?</li>
+                    <li>How do you activate a Sales Order voucher in Tally Prime?</li>
+                    <li>What fields are mandatory when creating a PO?</li>
+                    <li>Explain the flow from PO to Purchase Invoice.</li>
+                </ol>
+            </section>
+        </main>
+
+        <div class="nav-links">
+            <a href="previous-topic.html">← Previous Topic</a>
+            <a href="next-topic.html">Next Topic →</a>
+        </div>
+
+        <footer>
+            <p>© 2025 Tally Prime Learning Series • Made with ❤️ for Students & Professionals</p>
+        </footer>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </div>
+
+    <script></script>
+    <!-- <script>
+        // Show back-to-top button after scrolling
+        window.onscroll = function() {
+            const btn = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        };
+    </script> -->
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tally Prime: Multiple Currency Transactions</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TALLY PRIME – ADVANCED MODULE</h1>
+            <p style="font-size: 2.3rem; font-weight: 700; margin: 12px 0;">
+                📘 MULTIPLE CURRENCY TRANSACTIONS
+            </p>
+            <p style="font-size: 1.5rem; color: #1976d2;">
+                Export Sales • Import Purchases • Forex Gain/Loss • Global Business Ready
+            </p>
+        </header>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>Chapter Index</h2>
+            <ul>
+                <li><a href="#theory">1. Theory Section</a></li>
+                <li><a href="#practical">2. Practical Section</a></li>
+                <li><a href="#examples">3. Worked Examples</a></li>
+                <li><a href="#practice">4. Practice Set – 10 Vouchers</a></li>
+                <li><a href="#assignment">5. Integrated Assignment</a></li>
+                <li><a href="#reports">6. Reports to Check</a></li>
+                <li><a href="#outcome">7. Learning Outcome</a></li>
+            </ul>
+        </div>
+
+        <main>
+            <section id="theory">
+                <h2>1. Theory Section</h2>
+
+                <h3>1.1 What Is Multi-Currency Accounting?</h3>
+                <p>Used when your business deals with foreign parties, banks, or currencies:</p>
+                <ul class="highlight-list">
+                    <li>Export Sales in USD</li>
+                    <li>Import Purchases in EUR</li>
+                    <li>Foreign Bank Accounts (USD, GBP)</li>
+                    <li>Automatic Forex Gain/Loss</li>
+                </ul>
+
+                <h3>1.3 How Tally Handles Currency</h3>
+                <ul>
+                    <li>Base Currency: INR</li>
+                    <li>Foreign currencies: USD, EUR, GBP, etc.</li>
+                    <li>Exchange Rate per voucher date</li>
+                    <li>All reports show: <strong>Foreign Amount + INR Equivalent</strong></li>
+                    <li>Auto Forex Gain/Loss on payment</li>
+                </ul>
+
+                <h3>1.5 Enable Multi-Currency</h3>
+                <p><strong>F11 → Accounting Features →</strong><br>
+                <strong>Maintain Multiple Currencies: YES</strong></p>
+            </section>
+
+            <section id="practical">
+                <h2>2. Practical Section</h2>
+
+                <h3>2.1 Create Foreign Currencies</h3>
+                <div class="grid-2">
+                    <div class="practice-entry">
+                        <strong>USD – US Dollar</strong><br>
+                        Symbol: USD | Decimal: 2<br>
+                        Standard Rate: 1 USD = 82 INR
+                    </div>
+                    <div class="practice-entry">
+                        <strong>EUR – Euro</strong><br>
+                        Symbol: EUR | Decimal: 2<br>
+                        Standard Rate: 1 EUR = 90 INR
+                    </div>
+                </div>
+
+                <h3>2.2 Foreign Party Ledgers</h3>
+                <div class="practice-entry">
+                    ABC Inc. → Sundry Debtors → Currency: <strong>USD</strong>
+                </div>
+                <div class="practice-entry">
+                    Euro Traders → Sundry Creditors → Currency: <strong>EUR</strong>
+                </div>
+
+                <h3>2.3 Foreign Bank Account</h3>
+                <div class="practice-entry">
+                    Citibank USD A/c → Bank Accounts → Currency: <strong>USD</strong>
+                </div>
+            </section>
+
+            <section id="examples">
+                <h2>3. Worked Examples (Fully Solved)</h2>
+
+                <div class="practice-entry">
+                    <strong>Export Sale</strong> → ABC Inc.<br>
+                    5 Laptops @ 800 USD = 4,000 USD<br>
+                    Rate: 83 → INR = ₹3,32,000
+                </div>
+                <div class="practice-entry">
+                    <strong>Receipt with Gain</strong><br>
+                    Invoice Rate: 82 | Receipt Rate: 84<br>
+                    4,000 USD → Gain = 8,000 INR<br>
+                    <em>Tally Auto Posts: Forex Gain A/c Cr 8,000</em>
+                </div>
+                <div class="practice-entry">
+                    <strong>Import Purchase</strong> → Euro Traders<br>
+                    500 EUR @ 92 = ₹46,000 INR
+                </div>
+            </section>
+
+            <section id="practice">
+                <h2>4. Practice Set – 10 Multi-Currency Vouchers (MUST CREATE)</h2>
+                <p class="highlight"><strong>These will be used in Interest, Budgets & Scenario Management!</strong></p>
+
+                <h3>A. USD Transactions (Export to ABC Inc.)</h3>
+                <table>
+                    <tr><th>No</th><th>Voucher</th><th>Details</th><th>FC Amt</th><th>Rate</th><th>INR Value</th></tr>
+                    <tr><td>1</td><td>Sales</td><td>Export</td><td>2,000 USD</td><td>83</td><td>₹1,66,000</td></tr>
+                    <tr><td>2</td><td>Receipt</td><td>Full Payment</td><td>2,000 USD</td><td>84</td><td>₹1,68,000 → Gain ₹2,000</td></tr>
+                    <tr><td>3</td><td>Sales</td><td>Export</td><td>1,500 USD</td><td>83.50</td><td>₹1,25,250</td></tr>
+                    <tr><td>4</td><td>Receipt</td><td>Part Payment</td><td>1,000 USD</td><td>84</td><td>₹84,000 → Gain ₹500</td></tr>
+                    <tr><td>5</td><td>Journal</td><td>Forex Gain/Loss</td><td colspan="3">Auto-posted by Tally</td></tr>
+                </table>
+
+                <h3>B. EUR Transactions (Import from Euro Traders)</h3>
+                <table>
+                    <tr><th>No</th><th>Voucher</th><th>Details</th><th>FC Amt</th><th>Rate</th><th>INR Value</th></tr>
+                    <tr><td>1</td><td>Purchase</td><td>Import</td><td>900 EUR</td><td>90</td><td>₹81,000</td></tr>
+                    <tr><td>2</td><td>Payment</td><td>Full Payment</td><td>900 EUR</td><td>91</td><td>₹81,900 → Loss ₹900</td></tr>
+                    <tr><td>3</td><td>Purchase</td><td>Import</td><td>400 EUR</td><td>89</td><td>₹35,600</td></tr>
+                    <tr><td>4</td><td>Payment</td><td>Part Payment</td><td>200 EUR</td><td>90.50</td><td>₹18,100 → Loss ₹300</td></tr>
+                    <tr><td>5</td><td>Journal</td><td>Forex Loss</td><td colspan="3">Auto-posted</td></tr>
+                </table>
+            </section>
+
+            <section id="assignment">
+                <h2>5. Integrated Assignment</h2>
+                <ol class="important">
+                    <li>Create Currencies: USD & EUR</li>
+                    <li>Create Ledgers: ABC Inc. (USD), Euro Traders (EUR), Citibank USD A/c</li>
+                    <li>Create Forex Gain/Loss A/c (Indirect Expenses)</li>
+                    <li>Enter all 10 vouchers with correct rates</li>
+                </ol>
+            </section>
+
+            <section id="reports">
+                <h2>6. Reports to Check</h2>
+                <ul class="highlight-list">
+                    <li><strong>Forex Gain/Loss Summary</strong> → Trial Balance → Alt+F11</li>
+                    <li><strong>Ledger Vouchers</strong> → ABC Inc. → Shows USD + INR</li>
+                    <li><strong>Bank Book</strong> → Citibank USD A/c → Balance in USD & INR</li>
+                </ul>
+            </section>
+
+            <section id="outcome">
+                <h2>7. Learning Outcome</h2>
+                <p class="highlight" style="font-size: 1.5rem; margin-top: 20px;">
+                    You are now ready for international business accounting!<br>
+                    Export, Import, Forex Gain/Loss — All mastered! 🌍
+                </p>
+            </section>
+        </main>
+
+        <div class="nav-links">
+            <a href="New-Voucher-type-&-Class-Creation.html">← Previous Topic</a>
+            <a href="Interest-Calculation-(Simple-&-Compound).html">Next Topic →</a>
+        </div>
+
+        <footer>
+            <p>© 2025 Tally Prime Advanced Series • Global Accounting Mastery</p>
+        </footer>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </div>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>

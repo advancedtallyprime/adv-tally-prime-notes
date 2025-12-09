@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tally Prime: Interest Calculation (Simple & Compound)</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TALLY PRIME – ADVANCED MODULE</h1>
+            <p style="font-size: 2.5rem; font-weight: 700; margin: 15px 0;">
+                📘 INTEREST CALCULATION
+            </p>
+            <p style="font-size: 1.7rem; color: #d32f2f; font-weight: bold;">
+                Simple • Compound • Overdue • Bill-wise Interest Automation
+            </p>
+        </header>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>Chapter Index</h2>
+            <ul>
+                <li><a href="#intro">1. Introduction</a></li>
+                <li><a href="#theory">2. Theory – Types of Interest</a></li>
+                <li><a href="#config">3. Tally Configuration</a></li>
+                <li><a href="#ledger">4. Configure Interest in Ledgers</a></li>
+                <li><a href="#examples">5–6. Step-by-Step Examples</a></li>
+                <li><a href="#reports">7. Interest Reports</a></li>
+                <li><a href="#practice">8. Practice Set – 15 Entries</a></li>
+                <li><a href="#outcome">9. Final Outcome</a></li>
+            </ul>
+        </div>
+
+        <main>
+            <section id="intro">
+                <h2>1. Introduction</h2>
+                <p>Automatically calculate and charge interest on:</p>
+                <ul class="highlight-list">
+                    <li>Overdue customer invoices</li>
+                    <li>Delayed supplier payments</li>
+                    <li>Employee loans (compound)</li>
+                    <li>Bank loans & deposits</li>
+                </ul>
+                <p>Tally calculates interest daily — you just record the entry!</p>
+            </section>
+
+            <section id="theory">
+                <h2>2. Theory – Types of Interest</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>Simple Interest</h3>
+                        <p><strong>Formula:</strong><br>
+                        <code>I = P × R × T / 100</code><br>
+                        (or /365 for daily)</p>
+                        <p>Used for overdue bills</p>
+                    </div>
+                    <div class="card">
+                        <h3>Compound Interest</h3>
+                        <p><strong>Formula:</strong><br>
+                        <code>A = P(1 + R/100)<sup>n</sup></code></p>
+                        <p>Interest on interest<br>Used for loans</p>
+                    </div>
+                    <div class="card">
+                        <h3>Bill-by-Bill Interest</h3>
+                        <p>Interest only on individual overdue invoices<br>Not on total balance</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="config">
+                <h2>3. Enable Interest Calculation</h2>
+                <p><strong>F11 → Accounting Features →</strong></p>
+                <ul class="highlight-list">
+                    <li>Activate Interest Calculation → <strong>YES</strong></li>
+                    <li>Calculate Interest Transaction-by-Transaction → <strong>YES</strong></li>
+                    <li>Bill-wise Details must be ON</li>
+                </ul>
+            </section>
+
+            <section id="ledger">
+                <h2>4. Configure Interest in Ledgers (Critical Step)</h2>
+
+                <div class="practice-entry">
+                    <strong>Customer1 (Sundry Debtors)</strong><br>
+                    → Activate Interest: YES<br>
+                    → Rate: 18% p.a.<br>
+                    → Style: Simple<br>
+                    → On: Past Due Date (after 30 days)
+                </div>
+                <div class="practice-entry">
+                    <strong>Vendor1 (Sundry Creditors)</strong><br>
+                    → Rate: 12% p.a.<br>
+                    → Simple Interest<br>
+                    → On overdue bills
+                </div>
+                <div class="practice-entry">
+                    <strong>Employee Loan A/c</strong><br>
+                    → Rate: 10%<br>
+                    → Style: <strong>Compound Monthly</strong>
+                </div>
+            </section>
+
+            <section id="examples">
+                <h2>5–6. Step-by-Step Examples</h2>
+
+                <div class="practice-entry">
+                    <strong>Example 1: Customer Overdue Interest</strong><br>
+                    Invoice: ₹50,000 | Due: 30 days | Paid after 80 days<br>
+                    Overdue: 50 days | Rate: 18%<br>
+                    Interest = ₹50,000 × 18% × 50/365 ≈ <strong>₹1,233</strong><br>
+                    <em>Tally shows exact amount automatically</em>
+                </div>
+                <div class="practice-entry">
+                    <strong>Example 3: Compound Interest Loan</strong><br>
+                    ₹2,00,000 @ 10% compound monthly → 3 months<br>
+                    Final Amount ≈ <strong>₹2,05,040</strong><br>
+                    Interest = ₹5,040
+                </div>
+            </section>
+
+            <section id="reports">
+                <h2>7. Interest Reports – View & Record</h2>
+                <p><strong>Path:</strong><br>
+                Display → Statement of Accounts → <strong>Interest Calculations</strong></p>
+                <ul class="highlight-list">
+                    <li>Ledger-wise interest</li>
+                    <li>Bill-wise overdue interest</li>
+                    <li>Compound interest breakdown</li>
+                    <li>Interest Receivable / Payable Summary</li>
+                </ul>
+                <p>Then pass Journal Entry to record interest</p>
+            </section>
+
+            <section id="practice">
+                <h2>8. Practice Set – 15 Interest Entries (MUST DO)</h2>
+
+                <h3>A. Simple Interest – Customers (5)</h3>
+                <ol>
+                    <li>Customer1 – ₹1,00,000 sale – paid after 75 days</li>
+                    <li>Customer2 – ₹80,000 – paid after 50 days</li>
+                    <li>Customer3 – ₹1,50,000 – paid after 40 days</li>
+                    <li>Calculate & record interest on overdue bills</li>
+                </ol>
+
+                <h3>B. Simple Interest – Suppliers (5)</h3>
+                <ol start="6">
+                    <li>Vendor1 – ₹1,20,000 purchase – delay 60 days</li>
+                    <li>Vendor2 – ₹95,000 – delay 50 days</li>
+                    <li>Record interest expense on overdue payments</li>
+                </ol>
+
+                <h3>C. Compound Interest – Loans (5)</h3>
+                <ol start="11">
+                    <li>Employee Loan ₹2L @ 10% compound monthly – 3 months</li>
+                    <li>Partner Loan ₹3L @ 12% compound</li>
+                    <li>Bank Term Loan – missed EMI interest</li>
+                </ol>
+            </section>
+
+            <section id="outcome">
+                <h2>9. Final Outcome – You Are Now a Credit Control Expert!</h2>
+                <p class="highlight" style="font-size: 1.6rem; text-align: center; padding: 20px; background: #e3f2fd; border-radius: 12px;">
+                    You can now:<br>
+                    ✔ Auto-calculate overdue interest<br>
+                    ✔ Charge compound interest on loans<br>
+                    ✔ Generate professional interest statements<br>
+                    ✔ Recover money from late-paying customers<br>
+                    ✔ Manage loan portfolios accurately<br>
+                    <strong>This skill is used daily by every CA & finance manager!</strong>
+                </p>
+            </section>
+        </main>
+
+        <div class="nav-links">
+            <a href="Multiple-Currency-Transactions.html">← Previous Topic</a>
+            <a href="Budgets-&-Budgetary-Controls.html">Next Topic →</a>
+        </div>
+
+        <footer>
+            <p>© 2025 Tally Prime Advanced Series • Credit Management Mastery</p>
+        </footer>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </div>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>

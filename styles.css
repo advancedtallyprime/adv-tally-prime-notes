@@ -1,81 +1,216 @@
- 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f6f8;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        a{
-            text-decoration:none;
-            color: black;
-        }
 
+/* ===============================
+   Google Font
+================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-        section{
-            text-align: center;
-            h2{
-                border: none;
-            }
-        }
+/* ===============================
+   Reset & Base
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header {
-            background: #1e3a8a;
-            color: #fff;
-            padding: 25px;
-            text-align: center;
-        }
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f4f6fb;
+    color: #1f2937;
+    line-height: 1.7;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 32px;
-        }
+/* ===============================
+   Header
+================================ */
+header {
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
 
-        header p {
-            margin-top: 8px;
-            font-size: 16px;
-        }
+header h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
 
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 6px;
-        }
+header .tagline {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
 
-        h2 {
-            background: #e5e7eb;
-            padding: 10px;
-            border-left: 6px solid #1e3a8a;
-            font-size: 20px;
-        }
+/* ===============================
+   Intro Section
+================================ */
+section {
+    max-width: 1000px;
+    margin: 40px auto 20px;
+    padding: 0 20px;
+    text-align: center;
+}
 
-        ul {
-            margin: 15px 0 30px 20px;
-        }
+section h2 {
+    font-size: 2rem;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
 
-        ul li {
-            margin-bottom: 6px;
-        }
+section p {
+    font-size: 1.05rem;
+    color: #4b5563;
+}
 
-        .back-home {
-            display: inline-block;
-            margin-bottom: 20px;
-            text-decoration: none;
-            color: #1e3a8a;
-            font-weight: bold;
-        }
+/* ===============================
+   Container
+================================ */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
 
-        footer {
-            background: #111827;
-            color: #fff;
-            text-align: center;
-            padding: 15px;
-            font-size: 14px;
-        }
-    
+/* ===============================
+   Button
+================================ */
+.btn {
+    display: inline-block;
+    padding: 12px 26px;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
 
+.btn:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #1e40af, #2563eb);
+}
 
+/* ===============================
+   Modules Grid
+================================ */
+.container:not(:first-child) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
 
+/* ===============================
+   Module Card
+================================ */
+.module {
+    background: #ffffff;
+    border-radius: 0 0 25px 25px;
+    padding: 28px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.module::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(90deg, #2563eb, #22c55e);
+}
+
+.module:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* ===============================
+   Module Heading
+================================ */
+.module h2 {
+    font-size: 1.35rem;
+    margin-bottom: 15px;
+    color: #1e3a8a;
+}
+
+/* ===============================
+   Module Lists
+================================ */
+.module ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.module li {
+    padding: 8px 0 8px 26px;
+    position: relative;
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+/* Check Icon */
+.module li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #16a34a;
+    font-size: 0.85rem;
+}
+
+/* ===============================
+   Links inside modules
+================================ */
+.module a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.module a li {
+    transition: all 0.25s ease;
+}
+
+.module a li:hover {
+    color: #1d4ed8;
+    padding-left: 32px;
+}
+
+/* ===============================
+   Footer
+================================ */
+footer {
+    background: #0f172a;
+    color: #e5e7eb;
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 0.95rem;
+}
+
+footer .small {
+    font-size: 0.8rem;
+    opacity: 0.75;
+    margin-top: 6px;
+}
+
+/* ===============================
+   Responsive
+================================ */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+
+    .module {
+        padding: 22px;
+    }
+}
+  

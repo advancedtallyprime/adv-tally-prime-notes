@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tally Prime GST – Topic 4: Import of Goods & Services</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TALLY PRIME – GST PROFESSIONAL SERIES</h1>
+            <p style="font-size: 2.8rem; font-weight: 700; margin: 18px 0; color: #1976d2;">
+                Topic 4 – IMPORT OF GOODS & SERVICES
+            </p>
+            <p style="font-size: 1.9rem; color: #d32f2f; font-weight: bold;">
+                Bill of Entry • Customs Duty • IGST on Imports • RCM Services
+            </p>
+        </header>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>Chapter Index</h2>
+            <ul>
+                <li><a href="#theory">1. Theory – Import of Goods & Services</a></li>
+                <li><a href="#setup">2. Practical Setup – Ledgers & Masters</a></li>
+                <li><a href="#entries">3. Step-by-Step Entries (Goods + Services)</a></li>
+                <li><a href="#reports">4. Reports – GSTR-3B & ITC Impact</a></li>
+                <li><a href="#practice">5. Practice Set – 5 Import Entries</a></li>
+                <li><a href="#assignment">6. Assignment – High BCD Import</a></li>
+            </ul>
+        </div>
+
+        <main>
+            <section id="theory">
+                <h2>1. Theory – Import of Goods & Services</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3>Import of Goods</h3>
+                        <p>Treated as Inter-State Supply → IGST Applicable<br>
+                        <strong>IGST calculated on (Assessable Value + BCD)</strong><br>
+                        ITC Fully Available</p>
+                    </div>
+                    <div class="card">
+                        <h3>Import of Services</h3>
+                        <p>Reverse Charge Mechanism (RCM)<br>
+                        You pay IGST → Claim ITC in same month<br>
+                        Cash Neutral Transaction</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="setup">
+                <h2>2. Practical Setup – Required Masters</h2>
+
+                <h3>Foreign Supplier Ledger</h3>
+                <div class="practice-entry">
+                    Name: <strong>Overseas Supplier</strong><br>
+                    Under: Sundry Creditors<br>
+                    State: <strong>Not Applicable</strong> (Critical!)<br>
+                    GST Applicable: Not Applicable
+                </div>
+
+                <h3>Duty Ledger (Already Created in Topic 2)</h3>
+                <p>Ledger: <strong>Duty Ledger</strong> → Type: <strong>Customs</strong></p>
+            </section>
+
+            <section id="entries">
+                <h2>3. Step-by-Step Entries</h2>
+
+                <h3>Scenario A: Import of Goods (5 Laptops)</h3>
+                <p>Assessable Value: ₹50,000 | BCD: 10% | IGST: 18%</p>
+                <table>
+                    <tr><th>Component</th><th>Amount</th></tr>
+                    <tr><td>Assessable Value</td><td>₹50,000</td></tr>
+                    <tr><td>BCD (10%)</td><td>₹5,000</td></tr>
+                    <tr><td>Value for IGST</td><td>₹55,000</td></tr>
+                    <tr><td>IGST @18%</td><td>₹9,900</td></tr>
+                </table>
+
+                <div class="practice-entry">
+                    <strong>Purchase Voucher (F9)</strong><br>
+                    Party: Overseas Supplier<br>
+                    Nature: <strong>Import of Goods</strong> (Alt+I)<br>
+                    Laptop × 5 → ₹50,000<br>
+                    Duty Ledger (BCD) → ₹5,000<br>
+                    Input IGST → ₹9,900<br>
+                    Total: ₹64,900
+                </div>
+
+                <h3>Scenario B: Import of Services (Consultancy ₹10,000)</h3>
+                <div class="practice-entry">
+                    <strong>Step 1:</strong> Journal Voucher → Consultancy Expense Dr ₹10,000<br>
+                    <strong>Step 2:</strong> RCM Liability Journal (Stat Adjustment)<br>
+                    → Output IGST Dr ₹1,800 → Taxes Payable RCM Cr<br>
+                    <strong>Step 3:</strong> ITC Claim Journal<br>
+                    → Input IGST Dr ₹1,800 → Taxes Payable RCM Cr
+                </div>
+            </section>
+
+            <section id="reports">
+                <h2>4. Reports – GSTR-3B Impact</h2>
+                <p><strong>Gateway → GST Reports → GSTR-3B</strong></p>
+                <table>
+                    <tr><th>Report Section</th><th>Import Type</th><th>Amount</th></tr>
+                    <tr><td>Table 4(A)(1)</td><td>Import of Goods (ITC)</td><td>₹9,900</td></tr>
+                    <tr><td>Table 3.1(d) + 4(A)(2)</td><td>Import of Services (RCM)</td><td>₹1,800</td></tr>
+                </table>
+            </section>
+
+            <section id="practice">
+                <h2>5. Practice Set – 5 Import Entries (18% IGST)</h2>
+                <p class="important"><strong>Record All 5 – Mandatory!</strong></p>
+                <table>
+                    <thead>
+                        <tr><th>Sr</th><th>Type</th><th>Item/Service</th><th>Value</th><th>BCD</th><th>IGST</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Goods</td><td>Mouse (100 units)</td><td>₹20,000</td><td>5%</td><td>18%</td></tr>
+                        <tr><td>2</td><td>Goods</td><td>Laptop (10 units)</td><td>₹1,50,000</td><td>10%</td><td>18%</td></tr>
+                        <tr><td>3</td><td>Service</td><td>Software Development</td><td>₹30,000</td><td>N/A</td><td>18% (RCM)</td></tr>
+                        <tr><td>4</td><td>Goods</td><td>Data Cable (200 units)</td><td>₹5,000</td><td>0%</td><td>18%</td></tr>
+                        <tr><td>5</td><td>Service</td><td>Technical Training</td><td>₹15,000</td><td>N/A</td><td>18% (RCM)</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="assignment">
+                <h2>6. Assignment – High BCD Import (Mouse)</h2>
+                <p class="important">
+                    Assessable Value: ₹40,000 | BCD: 20% | IGST: 18%
+                </p>
+                <ol>
+                    <li>Calculate:
+                        <ul>
+                            <li>BCD = ₹8,000</li>
+                            <li>Value for IGST = ₹48,000</li>
+                            <li><strong>IGST = ₹8,640</strong></li>
+                        </ul>
+                    </li>
+                    <li>Record Purchase Voucher with:
+                        <ul>
+                            <li>Duty Ledger → ₹8,000</li>
+                            <li>Input IGST → ₹8,640</li>
+                        </ul>
+                    </li>
+                    <li>ITC Claimable in: <strong>May GSTR-3B</strong> (if BOE valid)</li>
+                    <li>Verify Input IGST Ledger shows credit of <strong>₹8,640</strong></li>
+                </ol>
+            </section>
+        </main>
+
+        <div class="nav-links">
+            <a href="GST-Topic-03-Purchase-Registered.html">← Topic 3: Purchase from Registered</a>
+            <a href="GST-Topic-05-Advance-Receipt.html">Topic 5: Advance Receipt & Tax Liability →</a>
+        </div>
+
+        <footer>
+            <p>© 2025 Tally Prime GST Professional Series • Import Mastery Achieved!</p>
+        </footer>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </div>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Full Front‑End Syllabus — HTML • CSS • JavaScript</title>
+  <meta name="description" content="Comprehensive syllabus covering HTML, HTML5, CSS3 and Modern JavaScript from basic to advanced." />
+  <!-- <style>
+
+    :root{
+      --bg:#FFFFFF --card:#FFFFFF; --muted:#ffffff; --accent:#ffffff; --glass: rgba(255,255,255,0.03);
+      --accent-2:#ffffff; --max-w:1100px; --radius:12px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#ffffff 0%, #f8f8f8 60%);color:#010a14}
+    .container{max-width:var(--max-w);margin:36px auto;padding:28px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+    header{display:flex;align-items:center;gap:16px}
+    header .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#032;box-shadow:0 6px 18px rgba(124,77,255,0.18)}
+    header h1{font-size:20px;margin:0}
+    header p{margin:0;color:var(--muted);font-size:13px}
+
+    .layout{display:grid;grid-template-columns:280px 1fr;gap:20px;margin-top:20px}
+    nav{background:var(--card);padding:16px;border-radius:12px;position:sticky;top:28px;height:calc(100vh - 64px);overflow:auto}
+    nav h3{margin-top:0;margin-bottom:12px;font-size:13px;color:var(--muted)}
+    nav input{width:100%;padding:10px;border-radius:8px;border:0;background:var(--glass);color:inherit}
+    nav ul{list-style:none;padding:0;margin:12px 0}
+    nav li{margin:8px 0}
+    nav a{color:#cfefff;text-decoration:none;font-size:14px}
+
+    main{background:transparent;padding:18px;border-radius:12px;min-height:400px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));padding:18px;border-radius:12px;margin-bottom:18px}
+    h2{margin:0 0 8px 0}
+    h3.section{margin-top:0;color:var(--accent)}
+    p.lead{color:var(--muted);margin:6px 0 16px 0}
+
+    ul.topics{columns:2;gap:20px;margin:0;padding:0;list-style:disc;margin-left:18px}
+    ul.topics li{margin:6px 0}
+
+    .controls{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+    .btn{background:var(--glass);border-radius:8px;padding:8px 10px;font-size:13px;border:1px solid rgba(255,255,255,0.02);cursor:pointer;color:var(--muted)}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;align-items:center}
+
+    /* responsive */
+    @media (max-width:900px){.layout{grid-template-columns:1fr}.container{margin:14px;padding:16px}.nav{position:static;height:auto}.card{padding:14px}ul.topics{columns:1}}
+
+    /* print-friendly */
+    @media print{body{background:white;color:black}nav, .controls, footer{display:none}.container{box-shadow:none;background:transparent}}
+  </style> -->
+<STYle>
+  /* ---------------------------------------------------
+   UNIVERSAL LIGHT THEME WITH :root VARIABLES
+   BLUE ACCENTS VERSION
+------------------------------------------------------*/
+
+/* ------- THEME VARIABLES ------- */
+:root {
+    --bg-main: #f6f7fb;
+    --bg-white: #ffffff;
+    --bg-table-header: #fafafa;
+
+    --text-dark: #2a2a2a;
+    --text-medium: #555;
+    --text-light: #777;
+
+    --border-light: #e5e5e5;
+    --border-soft: #ececec;
+
+    --blue: #1E73BE;
+    --blue-light: #3794E1;
+    --blue-dark: #155a91;
+
+    --shadow-soft: 0 6px 18px rgba(0,0,0,0.05);
+    --shadow-hover: 0 10px 25px rgba(0,0,0,0.08);
+    --shadow-blue: 0 4px 10px rgba(30,115,190,0.4);
+}
+
+/* ------- GLOBAL ------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--bg-main);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* -------- SCROLLBAR -------- */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #c7c7c7;
+    border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+/* ------- HEADER ------- */
+header {
+    padding: 60px 20px;
+    text-align: center;
+    background: var(--bg-white);
+    border-bottom: 1px solid var(--border-light);
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+header p {
+    font-size: 16px;
+    color: var(--text-medium);
+}
+
+/* ------- CONTAINER ------- */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 0;
+}
+
+/* ------- MODULE / BOX ------- */
+.module, .box, .card {
+    background: var(--bg-white);
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 35px;
+    border: 1px solid var(--border-soft);
+    box-shadow: var(--shadow-soft);
+    transition: 0.25s ease;
+}
+
+.module:hover, .box:hover, .card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* ------- HEADINGS ------- */
+.module h2, .box h2 {
+    margin-bottom: 12px;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--blue);
+}
+a{
+    text-decoration: none;
+}
+/* ------- LISTS ------- */
+ul {
+    margin-left: 25px;
+    margin-top: 12px;
+}
+
+ul li {
+    font-size: 15px;
+    padding: 4px 0;
+    color: var(--text-medium);
+}
+
+/* ------- BUTTON ------- */
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background: var(--blue-light);
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s ease;
+    box-shadow: var(--shadow-blue);
+}
+
+.btn:hover {
+    background: var(--blue-dark);
+    transform: translateY(-2px);
+}
+
+/* ------- TABLE ------- */
+.table-title {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 26px;
+    color: var(--blue);
+    font-weight: 600;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-white);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-soft);
+}
+
+table th {
+    background: var(--bg-table-header);
+    padding: 14px;
+    color: var(--text-dark);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-light);
+}
+
+table td {
+    padding: 14px;
+    color: var(--text-medium);
+    border-bottom: 1px solid #f1f1f1;
+}
+
+table tr:hover {
+    background: var(--bg-table-header);
+}
+
+.adv {
+    color: var(--blue-dark);
+    font-weight: 600;
+}
+
+/* ------- FOOTER ------- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--bg-white);
+    font-size: 14px;
+    margin-top: 40px;
+    border-top: 1px solid var(--border-light);
+    color: var(--text-light);
+}
+
+
+
+</STYle>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">WS</div>
+      <div>
+        <h1>Full Front‑End Syllabus — HTML • CSS • JavaScript</h1>
+        <p class="lead">Comprehensive topic list from basics to advanced. Semantic, printable, and mobile-friendly.</p>
+      </div>
+    </header>
+
+    <div class="layout">
+      <nav aria-label="Syllabus navigation">
+        <h3>Contents</h3>
+        <input id="filter" placeholder="Filter topics (type to search)" aria-label="filter topics" />
+        <ul id="toc">
+          <li><a href="#html">HTML &amp; HTML5</a></li>
+          <li><a href="#html-basics">HTML Basics</a></li>
+          <li><a href="#html-media">Images, Links, Media</a></li>
+          <li><a href="#html-forms">Forms &amp; Validation</a></li>
+          <li><a href="#html-graphics">Canvas / SVG / Graphics</a></li>
+          <li><a href="#html-apis">HTML5 Basic APIs</a></li>
+          <li><a href="#css">CSS &amp; CSS3</a></li>
+          <li><a href="#css-layout">Layout Systems</a></li>
+          <li><a href="#css-effects">Effects &amp; Animation</a></li>
+          <li><a href="#js">JavaScript</a></li>
+          <li><a href="#js-dom-bom">DOM &amp; BOM</a></li>
+          <li><a href="#projects">Projects &amp; Tools</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <section id="html" class="card">
+          <h2 class="section">HTML &amp; HTML5</h2>
+          <p class="lead">History, semantics, accessibility, media, forms, graphics and basic browser APIs.</p>
+
+          <article id="html-basics">
+            <h3>Introduction &amp; Fundamentals</h3>
+            <ul class="topics">
+              <li>History of HTML → evolution to HTML5</li>
+              <li>Document structure: doctype, html, head, body</li>
+              <li>Head elements: meta, title, link, meta viewport</li>
+              <li>Global attributes: id, class, style, title, data-* attributes</li>
+              <li>Semantic elements: header, footer, nav, main, article, section, aside</li>
+            </ul>
+          </article>
+
+          <article id="html-text">
+            <h3>Marking up Body Text</h3>
+            <ul class="topics">
+              <li>Text-level semantics: p, span, strong, em, small</li>
+              <li>Inline vs block elements; headings h1–h6</li>
+              <li>Lists: ul, ol, dl and nested lists</li>
+              <li>Tables: table, tr, th, td, caption, summary, colspan, rowspan</li>
+            </ul>
+          </article>
+
+          <article id="html-media">
+            <h3>Working with Images &amp; Links / Media</h3>
+            <ul class="topics">
+              <li>Images: img, srcset, sizes, alt text, loading=lazy</li>
+              <li>Links: a, download, mailto, anchors</li>
+              <li>HTML5 audio &amp; video: audio, video, tracks, captions, controls</li>
+              <li>Embed fonts: @font-face, Google Fonts, font-display</li>
+            </ul>
+          </article>
+
+          <article id="html-forms">
+            <h3>Forms &amp; Validation</h3>
+            <ul class="topics">
+              <li>Form elements: form, input types, textarea, select, option, label</li>
+              <li>HTML5 input types: email, tel, url, date, time, range, color, file</li>
+              <li>datalist, placeholder, required, pattern, autofocus</li>
+              <li>Client-side form validation and custom validation messages</li>
+            </ul>
+          </article>
+
+          <article id="html-graphics">
+            <h3>HTML5 Graphics</h3>
+            <ul class="topics">
+              <li>Canvas API basics: drawing shapes, paths, text, images</li>
+              <li>SVG basics: inline SVG, shapes, paths, viewBox, accessibility</li>
+              <li>Use-cases: charts, games, interactive visuals</li>
+            </ul>
+          </article>
+
+          <article id="html-apis">
+            <h3>HTML5 Basic APIs</h3>
+            <ul class="topics">
+              <li>Web Storage: localStorage &amp; sessionStorage</li>
+              <li>Geolocation API (intro)</li>
+              <li>Drag &amp; Drop API</li>
+              <li>Web Workers (concept) &amp; Offline/Cache (intro)</li>
+            </ul>
+          </article>
+
+          <article id="html-accessibility">
+            <h3>Accessibility &amp; SEO</h3>
+            <ul class="topics">
+              <li>ARIA roles &amp; attributes</li>
+              <li>Semantic markup for screen readers</li>
+              <li>SEO basics: meta tags, open graph, sitemaps</li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="css" class="card">
+          <h2 class="section">CSS &amp; CSS3</h2>
+          <p class="lead">Styling fundamentals, layout systems, typography, effects, preprocessors and architecture.</p>
+
+          <article id="css-basics">
+            <h3>Overview of CSS</h3>
+            <ul class="topics">
+              <li>Ways to include CSS: inline, internal, external</li>
+              <li>Selectors: type, class, id, attribute, descendant</li>
+              <li>Specificity, cascade, inheritance</li>
+            </ul>
+          </article>
+
+          <article id="css-visual">
+            <h3>Background &amp; Color • Text • Box Model</h3>
+            <ul class="topics">
+              <li>Background-image, gradients, background-position, repeat</li>
+              <li>Color models: HEX, RGB(A), HSL(A); opacity</li>
+              <li>Font properties, web fonts, icon fonts</li>
+              <li>Box model: margin, border, padding, box-sizing</li>
+            </ul>
+          </article>
+
+          <article id="css-selectors">
+            <h3>Elements, Pseudo-classes &amp; Pseudo-elements</h3>
+            <ul class="topics">
+              <li>Advanced selectors: sibling, child, attribute selectors</li>
+              <li>Pseudo-classes: :hover, :focus, :active, :visited</li>
+              <li>Pseudo-elements: ::before, ::after, ::first-letter</li>
+            </ul>
+          </article>
+
+          <article id="css-layout">
+            <h3>Layout Systems</h3>
+            <ul class="topics">
+              <li>Display types, position: static/relative/absolute/fixed/sticky</li>
+              <li>Flexbox: container &amp; item properties</li>
+              <li>CSS Grid: tracks, areas, alignment</li>
+              <li>Responsive design: media queries, mobile-first approach</li>
+            </ul>
+          </article>
+
+          <article id="css-effects">
+            <h3>Effects &amp; Animation</h3>
+            <ul class="topics">
+              <li>Transforms, transitions, keyframe animations</li>
+              <li>Filters, blend modes, shadows</li>
+              <li>Performance considerations: compositing &amp; GPU</li>
+            </ul>
+          </article>
+
+          <article id="css-architecture">
+            <h3>Architecture &amp; Tools</h3>
+            <ul class="topics">
+              <li>BEM methodology, utility classes, component-driven CSS</li>
+              <li>Preprocessors: SASS/SCSS basics (variables, nesting, mixins)</li>
+              <li>Frameworks intro: Bootstrap, Tailwind (optional)</li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="js" class="card">
+          <h2 class="section">JavaScript (Modern)</h2>
+          <p class="lead">Core language, DOM/BOM, async programming, APIs, storage and best practices.</p>
+
+          <article id="js-basics">
+            <h3>Introduction to JavaScript</h3>
+            <ul class="topics">
+              <li>History, uses &amp; how JS powers the web</li>
+              <li>Embedding JS: inline, external script, module type</li>
+              <li>Syntax, variables (var/let/const), data types, operators</li>
+            </ul>
+          </article>
+
+          <article id="js-programming">
+            <h3>Programming with JavaScript</h3>
+            <ul class="topics">
+              <li>Control flow: if/else, switch</li>
+              <li>Loops &amp; iteration: for, while, for...of, forEach</li>
+              <li>Functions: declaration, expression, arrow functions, scope &amp; closures</li>
+            </ul>
+          </article>
+
+          <article id="js-data">
+            <h3>Structuring Data</h3>
+            <ul class="topics">
+              <li>Arrays &amp; important methods: map, filter, reduce</li>
+              <li>Objects, prototypes, classes (ES6)</li>
+              <li>JSON: parse &amp; stringify</li>
+            </ul>
+          </article>
+
+          <article id="js-bom">
+            <h3>Browser Object Model (BOM)</h3>
+            <ul class="topics">
+              <li>Window, Location, History, Navigator, Screen</li>
+              <li>Timers: setTimeout, setInterval, requestAnimationFrame</li>
+            </ul>
+          </article>
+
+          <article id="js-dom">
+            <h3>Document Object Model (DOM)</h3>
+            <ul class="topics">
+              <li>Selecting elements, traversing, manipulating nodes</li>
+              <li>Event handling &amp; delegation</li>
+              <li>Creating/removing nodes, updating attributes &amp; styles</li>
+            </ul>
+          </article>
+
+          <article id="js-forms">
+            <h3>Working with Forms &amp; Validation</h3>
+            <ul class="topics">
+              <li>Accessing form elements, reading &amp; setting values</li>
+              <li>Prevent default behaviour, custom validation using JS</li>
+              <li>Integrating with server-side APIs (fetch) &amp; handling responses</li>
+            </ul>
+          </article>
+
+          <article id="js-async">
+            <h3>Async JavaScript &amp; APIs</h3>
+            <ul class="topics">
+              <li>Callbacks vs Promises vs async/await</li>
+              <li>Fetch API, XMLHttpRequest (legacy), CORS basics</li>
+              <li>LocalStorage, SessionStorage, Cookies</li>
+            </ul>
+          </article>
+
+          <article id="js-best">
+            <h3>Best Practices &amp; Tools</h3>
+            <ul class="topics">
+              <li>Debugging with DevTools</li>
+              <li>Code style: linting &amp; formatting (ESLint, Prettier)</li>
+              <li>Performance tips, security basics (XSS, CSRF intro)</li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="projects" class="card">
+          <h2 class="section">Projects • Tools • Next Steps</h2>
+          <ul class="topics">
+            <li>Basic Projects: Resume page, Gallery, Landing page</li>
+            <li>Intermediate: Responsive portfolio, Interactive forms</li>
+            <li>Advanced: To‑do app (CRUD), Weather app (API), Blog with client-side routing</li>
+            <li>Tools: Git &amp; GitHub, VS Code, Deploy on Netlify / GitHub Pages</li>
+          </ul>
+        </section>
+
+        <footer>
+          <div>Generated: Comprehensive syllabus • HTML/CSS output</div>
+          <div>Need PDF / PPT? Reply: <strong>PDF</strong> or <strong>PPT</strong></div>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // small client-side filter for the nav toc
+    const filter = document.getElementById('filter');
+    const toc = document.getElementById('toc');
+    filter.addEventListener('input', (e)=>{
+      const q = e.target.value.toLowerCase().trim();
+      const links = [...toc.querySelectorAll('a')];
+      links.forEach(a=>{
+        const li = a.parentElement;
+        const text = a.textContent.toLowerCase();
+        li.style.display = text.includes(q) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>

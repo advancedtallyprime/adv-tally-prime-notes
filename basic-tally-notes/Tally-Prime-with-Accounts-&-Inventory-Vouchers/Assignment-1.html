@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tally Prime: Complete Purchase & Sales Cycle Assignment</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div class="container">
+<div id="header"></div>
+
+<section id="head">
+    <h2 id="pageTitle"></h2>
+</section>
+
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>Assignment Contents</h2>
+            <ul>
+                <li><a href="#overview">Voucher Types Overview</a></li>
+                <li><a href="#company">Step 1: Company Creation</a></li>
+                <li><a href="#ledgers">Step 2: Ledger Creation</a></li>
+                <li><a href="#stock">Step 3: Stock Item Creation</a></li>
+                <li><a href="#purchase">Step 4: Purchase Cycle (Vendor1)</a></li>
+                <li><a href="#sales">Step 5: Sales Cycle (Customer1)</a></li>
+                <li><a href="#reports">Step 6: Reports & Validation</a></li>
+                <li><a href="#contra">Bonus: Contra Entries Practice</a></li>
+                <li><a href="#journal">Bonus: Journal Entries Practice</a></li>
+            </ul>
+        </div>
+
+        <main>
+            <section id="overview">
+                <h2>Voucher Types Overview</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>No Effect on Accounts</h3>
+                        <ul>
+                            <li>Sales Order → Intent to sell</li>
+                            <li>Purchase Order → Intent to buy</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Both Accounts + Inventory</h3>
+                        <ul>
+                            <li>Purchase Voucher</li>
+                            <li>Sales Voucher</li>
+                            <li>Debit Note (Purchase Return)</li>
+                            <li>Credit Note (Sales Return)</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Accounts Only</h3>
+                        <ul>
+                            <li>Payment Voucher (F5)</li>
+                            <li>Receipt Voucher (F6)</li>
+                            <li>Journal Voucher (F7)</li>
+                            <li>Contra Voucher (F4)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid-3" style="margin-top: 20px;">
+                    <div class="card">
+                        <h3>Inventory Only</h3>
+                        <ul>
+                            <li>Delivery Note (Alt+F8)</li>
+                            <li>Receipt Note (Alt+F9)</li>
+                            <li>Rejection In (Alt+F6)</li>
+                            <li>Rejection Out (Alt+F7)</li>
+                            <li>Stock Journal</li>
+                            <li>Physical Stock</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="company">
+                <h2>Step 1: Company Creation</h2>
+                <p><strong>Gateway → Alt+F3 → Create Company</strong></p>
+                <table>
+                    <tr><th>Field</th><th>Value</th></tr>
+                    <tr><td>Company Name</td><td>ABC TRADERS</td></tr>
+                    <tr><td>Address</td><td>Mumbai, Maharashtra</td></tr>
+                    <tr><td>Currency</td><td>₹</td></tr>
+                    <tr><td>Financial Year</td><td>1-Apr-2025</td></tr>
+                </table>
+            </section>
+
+            <section id="ledgers">
+                <h2>Step 2: Ledger Creation</h2>
+                <table>
+                    <tr><th>Ledger Name</th><th>Group</th><th>Opening Balance</th><th>Bill-wise</th></tr>
+                    <tr><td>Vendor1</td><td>Sundry Creditors</td><td>₹0</td><td>Yes</td></tr>
+                    <tr><td>Customer1</td><td>Sundry Debtors</td><td>₹0</td><td>Yes</td></tr>
+                    <tr><td>Cash</td><td>Cash-in-Hand</td><td>₹50,00,000</td><td>No</td></tr>
+                    <tr><td>Sales Invoice / Order / Return / Goods Delivered</td><td>Sales Accounts</td><td>₹0</td><td>No</td></tr>
+                    <tr><td>Purchase Invoice / Order / Return / Goods Received</td><td>Purchase Accounts</td><td>₹0</td><td>No</td></tr>
+                </table>
+            </section>
+
+            <section id="stock">
+                <h2>Step 3: Stock Item Creation</h2>
+                <p><strong>Name:</strong> Laptop | <strong>Category:</strong> Electronics | <strong>Group:</strong> Acer | <strong>Unit:</strong> Nos | <strong>Opening Qty:</strong> 0</p>
+            </section>
+
+            <section id="purchase">
+                <h2>Step 4: Purchase Cycle (Vendor1)</h2>
+                <div class="practice-entry"><strong>PO001</strong> → Purchase Order → 200 Laptops @ ₹50,000 = ₹1,00,00,000</div>
+                <div class="practice-entry"><strong>RN001</strong> → Receipt Note → 175 Laptops received (Stock +175)</div>
+                <div class="practice-entry"><strong>RO001</strong> → Rejection Out → 25 Laptops returned (Stock -25)</div>
+                <div class="practice-entry"><strong>PUR001</strong> → Purchase Invoice → 150 Laptops @ ₹50,000 = ₹75,00,000</div>
+                <div class="practice-entry"><strong>DN001</strong> → Debit Note → 25 Laptops @ ₹50,000 = ₹12,50,000 (Return)</div>
+                <div class="practice-entry"><strong>PAY001</strong> → Payment → ₹62,50,000 paid to Vendor1</div>
+                <div class="practice-entry"><strong>DN002</strong> → Final Debit Note → ₹12,50,000 adjustment</div>
+                <div class="practice-entry"><strong>REC001</strong> → Refund received → ₹12,50,000 from Vendor1</div>
+            </section>
+
+            <section id="sales">
+                <h2>Step 5: Sales Cycle (Customer1)</h2>
+                <div class="practice-entry"><strong>SO001</strong> → Sales Order → 120 Laptops @ ₹60,000 = ₹72,00,000</div>
+                <div class="practice-entry"><strong>DN001</strong> → Delivery Note → 110 Laptops delivered (Stock -110)</div>
+                <div class="practice-entry"><strong>RI001</strong> → Rejection In → 10 Laptops returned (Stock +10)</div>
+                <div class="practice-entry"><strong>SAL001</strong> → Sales Invoice → 100 Laptops @ ₹60,000 = ₹60,00,000</div>
+                <div class="practice-entry"><strong>REC002</strong> → Receipt → ₹54,00,000 received from Customer1</div>
+                <div class="practice-entry"><strong>CN001</strong> → Credit Note → 10 Laptops @ ₹60,000 = ₹6,00,000</div>
+                <div class="practice-entry"><strong>PAY002</strong> → Refund → ₹6,00,000 paid to Customer1</div>
+            </section>
+
+            <section id="reports">
+                <h2>Step 6: Final Reports & Validation</h2>
+                <table>
+                    <tr><th>Report</th><th>Expected Result</th></tr>
+                    <tr><td>Stock Summary</td><td>Closing Stock: 10 Laptops</td></tr>
+                    <tr><td>Vendor1 Balance</td><td>₹0 (Nil)</td></tr>
+                    <tr><td>Customer1 Balance</td><td>₹0 (Nil)</td></tr>
+                    <tr><td>Profit & Loss</td><td>Sales (₹60L) – Purchase (₹75L) + Returns = Net Profit/Loss</td></tr>
+                </table>
+            </section>
+
+            <section id="contra">
+                <h2>Bonus: Contra Entries Practice</h2>
+                <p><strong>Opening Balances:</strong> Maharashtra Bank: ₹4,00,000 | ICICI Bank: ₹5,00,000</p>
+                <div class="practice-entry"><strong>8/4</strong> → Withdraw ₹5,000 from State Bank → Cash Dr</div>
+                <div class="practice-entry"><strong>15/5</strong> → Deposit ₹1,000 into State Bank</div>
+                <div class="practice-entry"><strong>17/5</strong> → Transfer ₹5,000 from ICICI to Maharashtra Bank</div>
+                <div class="practice-entry"><strong>20/6</strong> → Transfer ₹10,000 from Maharashtra to State Bank</div>
+                <div class="practice-entry"><strong>22/6</strong> → Deposit ₹4,000 cash into ICICI Bank</div>
+                <div class="practice-entry"><strong>7/7</strong> → Transfer ₹7,000 from State Bank to ICICI Bank</div>
+            </section>
+
+            <section id="journal">
+                <h2>Bonus: Journal Entries Practice</h2>
+                <div class="practice-entry"><strong>Depreciation</strong> → Depreciation A/c Dr ₹5,000 → To Machinery A/c</div>
+                <div class="practice-entry"><strong>Outstanding Salary</strong> → Salary A/c Dr ₹12,000 → To Outstanding Salary</div>
+                <div class="practice-entry"><strong>Free Samples</strong> → Advertisement A/c Dr ₹8,000 → To Purchases A/c</div>
+            </section>
+        </main>
+
+        <div class="nav-links">
+            <a href="Journal-&-Contra.html">← Previous Topic</a>
+            <a href="../Tally-Prime-with-Advanced-Accounting/Bill-wise-Details-&-Credit-Limits.html">Next Topic →</a>
+        </div>
+
+
+<div id="footer"></div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </div>
+<script src="../scripts.js"></script>
+</body>
+</html>

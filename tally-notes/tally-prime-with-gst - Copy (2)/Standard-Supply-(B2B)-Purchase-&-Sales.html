@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tally Prime GST: Standard Supply (B2B) - Purchase & Sales</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TALLY PRIME – GST PROFESSIONAL SERIES</h1>
+            <p >
+                STANDARD SUPPLY (B2B) - PURCHASE & SALES
+            </p>
+            <p >
+                Intra-State CGST/SGST • Inter-State IGST • ITC Generation & Liability
+            </p>
+        </header>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>Chapter Index</h2>
+            <ul>
+                <li><a href="#theory">1. Theory – B2B Transactions & ITC</a></li>
+                <li><a href="#setup">2. Practical Setup – Party Ledger Verification</a></li>
+                <li><a href="#entries">3. Step-by-Step Entries (Intra & Inter-State)</a></li>
+                <li><a href="#reports">4. Reports – GSTR-1 & GSTR-3B</a></li>
+                <li><a href="#practice">5. Practice Set – 10 B2B Vouchers</a></li>
+                <li><a href="#assignment">6. Assignment – Mouse Purchase & Inter-State Sale</a></li>
+            </ul>
+        </div>
+
+        <main>
+            <section id="theory">
+                <h2>1. Theory – B2B Standard Supply</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3>B2B Transactions</h3>
+                        <p>Supply between two GST-registered Regular Taxpayers<br>
+                        → Full ITC available on purchases</p>
+                    </div>
+                    <div class="card">
+                        <h3>ITC & Output Liability</h3>
+                        <p><strong>ITC:</strong> Tax paid on buys (set-off against output)<br>
+                        <strong>Output:</strong> Tax collected on sales (pay to govt after ITC)</p>
+                    </div>
+                </div>
+
+                <h3>Tax Mapping – Intra vs Inter-State</h3>
+                <table>
+                    <thead>
+                        <tr><th>Type</th><th>Location</th><th>Tax Components</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Intra-State</td><td>Same State (Maharashtra)</td><td>CGST + SGST</td></tr>
+                        <tr><td>Inter-State</td><td>Different States (Maharashtra → Goa)</td><td>IGST</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="setup">
+                <h2>2. Practical Setup – Verify Party Ledgers</h2>
+                <p><strong>Gateway → Alter → Ledger → Local Supplier / Local Customer</strong></p>
+                <ul class="highlight-list">
+                    <li>Registration Type: <strong>Regular</strong></li>
+                    <li>State: <strong>Maharashtra</strong></li>
+                    <li>GSTIN: Valid 15-digit</li>
+                </ul>
+                <p class="highlight">For Inter-State: Set State to <strong>Goa</strong> (State Code 30)</p>
+            </section>
+
+            <section id="entries">
+                <h2>3. Step-by-Step Entries – 4 Real Scenarios</h2>
+
+                <h3>Scenario A: Intra-State Purchase (ITC)</h3>
+                <div class="practice-entry">
+                    5 Laptops @ ₹30,000 = ₹1,50,000<br>
+                    <strong>F9 Purchase</strong> → Local Supplier<br>
+                    → Input CGST ₹13,500 + Input SGST ₹13,500<br>
+                    <strong>Total: ₹1,77,000 | ITC: ₹27,000</strong>
+                </div>
+
+                <h3>Scenario B: Inter-State Purchase (ITC)</h3>
+                <div class="practice-entry">
+                    50 Mice @ ₹400 = ₹20,000<br>
+                    <strong>F9 Purchase</strong> → Inter-State Supplier (Goa)<br>
+                    → Input IGST ₹3,600<br>
+                    <strong>Total: ₹23,600 | ITC: ₹3,600</strong>
+                </div>
+
+                <h3>Scenario C: Intra-State Sale (Liability)</h3>
+                <div class="practice-entry">
+                    2 Laptops @ ₹45,000 = ₹90,000<br>
+                    <strong>F8 Sales</strong> → Local Customer<br>
+                    → Output CGST ₹8,100 + Output SGST ₹8,100<br>
+                    <strong>Total: ₹1,06,200 | Liability: ₹16,200</strong>
+                </div>
+
+                <h3>Scenario D: Inter-State Sale (Liability)</h3>
+                <div class="practice-entry">
+                    10 Mice @ ₹600 = ₹6,000<br>
+                    <strong>F8 Sales</strong> → Inter-State Customer (Goa)<br>
+                    → Output IGST ₹1,080<br>
+                    <strong>Total: ₹7,080 | Liability: ₹1,080</strong>
+                </div>
+            </section>
+
+            <section id="reports">
+                <h2>4. Reports – GSTR-1 & GSTR-3B</h2>
+                <p><strong>GSTR-1:</strong> Display → GST Reports → GSTR-1</p>
+                <ul class="highlight-list">
+                    <li>B2B Invoices → Sales C & D appear</li>
+                </ul>
+                <p><strong>GSTR-3B:</strong> Display → Statutory Reports → GST → GSTR-3B</p>
+                <ul class="highlight-list">
+                    <li>Table 3.1(a) → Output Tax from Sales</li>
+                    <li>Table 4 → ITC from Purchases</li>
+                </ul>
+            </section>
+
+            <section id="practice">
+                <h2>5. Practice Set – 10 B2B Vouchers (18% GST)</h2>
+                <p class="important"><strong>Record All 10 – Mandatory!</strong></p>
+                <table>
+                    <thead>
+                        <tr><th>Sr</th><th>Type</th><th>Item</th><th>Qty</th><th>Rate (₹)</th><th>Party</th><th>State (Tax)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Purchase</td><td>Laptop</td><td>3</td><td>31,000</td><td>Local Supplier</td><td>Intra (CGST+SGST)</td></tr>
+                        <tr><td>2</td><td>Sale</td><td>Laptop</td><td>1</td><td>48,000</td><td>Local Customer</td><td>Intra (CGST+SGST)</td></tr>
+                        <tr><td>3</td><td>Purchase</td><td>Mouse</td><td>25</td><td>450</td><td>Inter-State Supplier</td><td>Inter (IGST)</td></tr>
+                        <tr><td>4</td><td>Sale</td><td>Mouse</td><td>5</td><td>650</td><td>Inter-State Customer</td><td>Inter (IGST)</td></tr>
+                        <tr><td>5</td><td>Purchase</td><td>Service: AMC</td><td>1</td><td>7,500</td><td>Local Supplier</td><td>Intra (CGST+SGST)</td></tr>
+                        <tr><td>6</td><td>Sale</td><td>Service: AMC</td><td>1</td><td>11,000</td><td>Local Customer</td><td>Intra (CGST+SGST)</td></tr>
+                        <tr><td>7</td><td>Purchase</td><td>Laptop</td><td>7</td><td>30,500</td><td>Local Supplier</td><td>Intra (CGST+SGST)</td></tr>
+                        <tr><td>8</td><td>Sale</td><td>Mouse</td><td>15</td><td>550</td><td>Local Customer</td><td>Intra (CGST+SGST)</td></tr>
+                        <tr><td>9</td><td>Purchase</td><td>Mouse</td><td>40</td><td>380</td><td>Inter-State Supplier</td><td>Inter (IGST)</td></tr>
+                        <tr><td>10</td><td>Sale</td><td>Laptop</td><td>2</td><td>49,000</td><td>Inter-State Customer</td><td>Inter (IGST)</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="assignment">
+                <h2>6. Assignment – Mouse Purchase & Inter-State Sale</h2>
+                <p class="important">
+                    <strong>Transaction:</strong> Purchase 100 Mice @ ₹380 → Sell 60 @ ₹580 to Karnataka
+                </p>
+                <ol>
+                    <li>Purchase Voucher → Total ITC?<br>
+                        <strong>₹6,840</strong> (CGST+SGST ₹3,420 each)</li>
+                    <li>Sales Voucher → IGST Liability?<br>
+                        <strong>₹6,264</strong> (18% on ₹34,800)</li>
+                    <li>GSTR-3B Set-Off Order?<br>
+                        <strong>CGST/SGST against IGST</strong></li>
+                    <li>Net Payable/Carry Forward?<br>
+                        <strong>₹576 ITC Carry Forward</strong></li>
+                </ol>
+            </section>
+        </main>
+
+        <div class="nav-links">
+            <a href="GST-Ledger-Creation-&-Tax-Rates.html">← Previous Topic</a>
+            <a href="Purchase-from-URD-(Unregistered-Dealer)-&-RCM.html">Next Topic →</a>
+        </div>
+
+        <footer>
+            <p>© 2025 Tally Prime GST Professional Series • B2B Mastery Complete!</p>
+        </footer>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </div>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>

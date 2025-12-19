@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tally Prime Purchase Orders & Sales Orders (10 Practice Entries)</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div class="container">
+<div id="header"></div>
+
+<section id="head">
+    <h2 id="pageTitle"></h2>
+</section>
+
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>Chapter Outline</h2>
+            <ul>
+                <li><a href="#concept">1. Concept of Order Processing</a></li>
+                <li><a href="#po">2. Purchase Orders (PO)</a></li>
+                <li><a href="#so">3. Sales Orders (SO)</a></li>
+                <li><a href="#activation">4. PO/SO Activation in Tally</a></li>
+                <li><a href="#po-creation">5. Purchase Order Creation + 5 Practice Entries</a></li>
+                <li><a href="#so-creation">6. Sales Order Creation + 5 Practice Entries</a></li>
+                <li><a href="#alter-cancel">7. Alteration & Cancellation</a></li>
+                <li><a href="#tracking">8. Order Tracking Flow</a></li>
+                <li><a href="#mistakes">9. Common Mistakes</a></li>
+                <li><a href="#revision">10. Revision Notes</a></li>
+                <li><a href="#assignment">11. Combined Practice Assignment (10 Entries)</a></li>
+            </ul>
+        </div>
+
+        <main>
+            <section id="concept">
+                <h2>1. Concept of Order Processing</h2>
+                <p>Order processing records business commitments <strong>before</strong> actual purchase or sale occurs.</p>
+                <p>PO/SO entries do <strong>NOT</strong> affect ledger balances or stock — they only record intent.</p>
+            </section>
+
+            <section id="po">
+                <h2>2. Purchase Order (PO)</h2>
+                <p>A formal request sent by the business to its supplier for goods.</p>
+                <p>Benefits: Clear documentation, prevents over-billing, tracks pending orders.</p>
+            </section>
+
+            <section id="so">
+                <h2>3. Sales Order (SO)</h2>
+                <p>A confirmation document sent by the business to its customer.</p>
+                <p>Benefits: Confirms demand, plans stock, prevents dispatch errors.</p>
+            </section>
+
+            <section id="activation">
+                <h2>4. Voucher Activation</h2>
+                <ol>
+                    <li>Option 1</li>
+                    <li>Gateway of Tally > Masters > Alter > Voucher Type </li>
+                    <li>> Purchase Order > Activate this Voucher Type > Yes</li>
+                </ol>
+                <ol>
+                    <li>Option 2</li>
+                    <li>Gateway of Tally > Transactions > Voucher > F10/Other Voucher </li>
+                    <li>> Show Inactive > Purchase Order > Activate this Voucher > Yes</li>
+                </ol>
+                <p>Same For Sales Order</p>
+            </section>
+            
+<section id="po-creation">
+    <h2>5. Purchase Order Creation + 5 Practice Entries</h2>
+    <p><strong>Shortcut:</strong> <kbd>Ctrl + F9</kbd></p>
+
+    <h3>5 Practice Purchase Orders (Create Exactly)</h3>
+    <div class="practice-entry">
+        <strong>PO-01</strong><br>
+        Supplier: Techno Traders<br>
+        • Samsung A15 – 10 Nos @ ₹12,500<br>
+        • JBL Earphones – 20 Nos @ ₹650<br>
+        Due Date: 10 Days
+    </div>
+    <div class="practice-entry">
+        <strong>PO-02</strong><br>
+        Supplier: Star Electronics<br>
+        • Vivo Y17 – 15 Nos @ ₹14,800<br>
+        Due Date: 7 Days
+    </div>
+    <div class="practice-entry">
+        <strong>PO-03</strong><br>
+        Supplier: National Distributors<br>
+        • Boat Headphones – 25 Nos @ ₹1,150<br>
+        • JBL Earphones – 40 Nos @ ₹650
+    </div>
+    <div class="practice-entry">
+        <strong>PO-04</strong><br>
+        Supplier: Universal Mobile Hub<br>
+        • Samsung A15 – 8 Nos @ ₹12,500<br>
+        • Vivo Y17 – 6 Nos @ ₹14,800
+    </div>
+    <div class="practice-entry">
+        <strong>PO-05</strong><br>
+        Supplier: Digital World Pvt. Ltd.<br>
+        • Boat Headphones – 30 Nos @ ₹1,150<br>
+        Due Date: 12 Days
+    </div>
+</section>
+
+<section id="so-creation">
+    <h2>6. Sales Order Creation + 5 Practice Entries</h2>
+    <p><strong>Shortcut:</strong> <kbd>Ctrl + F8</kbd></p>
+
+    <h3>5 Practice Sales Orders (Create Exactly)</h3>
+    <div class="practice-entry">
+        <strong>SO-01</strong><br>
+        Customer: City Mobiles<br>
+        • Vivo Y17 – 10 Nos @ ₹16,000<br>
+        • JBL Earphones – 15 Nos @ ₹900
+    </div>
+    <div class="practice-entry">
+        <strong>SO-02</strong><br>
+        Customer: Royal Electronics<br>
+        • Samsung A15 – 12 Nos @ ₹14,200
+    </div>
+    <div class="practice-entry">
+        <strong>SO-03</strong><br>
+        Customer: Modern Gadget Store<br>
+        • Boat Headphones – 20 Nos @ ₹1,550<br>
+        • JBL Earphones – 25 Nos @ ₹900
+    </div>
+    <div class="practice-entry">
+        <strong>SO-04</strong><br>
+        Customer: Mobile Planet<br>
+        • Samsung A15 – 5 Nos @ ₹14,200<br>
+        • Vivo Y17 – 4 Nos @ ₹16,000
+    </div>
+    <div class="practice-entry">
+        <strong>SO-05</strong><br>
+        Customer: Digital Bazaar<br>
+        • Boat Headphones – 18 Nos @ ₹1,550<br>
+        • JBL Earphones – 30 Nos @ ₹900
+    </div>
+</section>
+
+
+            <section id="alter-cancel">
+                <h2>7. Alteration & Cancellation</h2>
+                <p><strong>Alter:</strong> Day Book → Select PO/SO → Enter → Modify → Save</p>
+                <p><strong>Cancel:</strong> Open PO/SO → <kbd>Alt + X</kbd> → Confirm</p>
+            </section>
+
+            <section id="tracking">
+                <h2>8. Order Tracking Flow</h2>
+                <div class="flowchart">
+                    <strong>PURCHASE FLOW</strong><br>
+                    Purchase Order → Receipt Note → Purchase Voucher<br><br>
+                    <strong>SALES FLOW</strong><br>
+                    Sales Order → Delivery Note → Sales Voucher
+                </div>
+            </section>
+
+            <section id="mistakes">
+                <h2>9. Common Mistakes</h2>
+                <ul>
+                    <li>Wrong supplier/customer ledger</li>
+                    <li>Incorrect rates or quantities</li>
+                    <li>Wrong stock item selected</li>
+                    <li>No due date entered</li>
+                    <li>Order processing not activated</li>
+                </ul>
+            </section>
+
+            <section id="revision">
+                <h2>10. Revision Notes</h2>
+                <ul>
+                    <li>PO → To Supplier | SO → To Customer</li>
+                    <li>PO/SO do <strong>NOT</strong> affect stock or accounts</li>
+                    <li>Must enable in F11 → Inventory Features</li>
+                    <li>Used for planning & tracking</li>
+                    <li>Essential for Receipt/Delivery Notes later</li>
+                </ul>
+            </section>
+
+            <section id="assignment">
+                <h2>11. Combined Practical Assignment (10 Entries)</h2>
+                <p class="highlight"><strong>MUST CREATE IN TALLY EXACTLY:</strong></p>
+                <p><strong>5 Purchase Orders</strong> (PO-01 to PO-05 as above)<br>
+                <strong>5 Sales Orders</strong> (SO-01 to SO-05 as above)</p>
+                <p>These 10 orders will be used in the next topic for:</p>
+                <ul>
+                    <li>Receipt Notes & Purchase Vouchers</li>
+                    <li>Delivery Notes & Sales Vouchers</li>
+                    <li>Rejection In/Return Entries</li>
+                </ul>
+                <p class="highlight">Do not skip — this is your master order dataset!</p>
+            </section>
+        </main>
+
+        <div class="nav-links">
+            <a href="../Tally-Prime-Basics/Inventory-creation.html">← Previous Topic</a>
+            <a href="Delivery-Note-&-Receipt-Note.html">Next Topic →</a>
+        </div>
+
+<div id="footer"></div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </div>
+    <script src="../scripts.js"></script>
+</body>
+</html>

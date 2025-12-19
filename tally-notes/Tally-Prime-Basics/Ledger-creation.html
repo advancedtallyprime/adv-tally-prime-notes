@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tally Prime: Ledger Creation (Professional Institute-Level)</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div class="container">
+<div id="header"></div>
+<section id="head">
+    <h2 id="pageTitle"></h2>
+</section>
+
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>Chapter Outline</h2>
+            <ul>
+                <li><a href="#intro">1. Introduction to Ledgers</a></li>
+                <li><a href="#purpose">2. Purpose of Ledgers in Accounting</a></li>
+                <li><a href="#groups">3. Ledger Groups in Tally Prime</a></li>
+                <li><a href="#rules">4. Rules of Ledger Creation</a></li>
+                <li><a href="#creation">5. Ledger Creation – Step-by-Step Procedure</a></li>
+                <li><a href="#fields">6. Understanding All Ledger Fields in Detail</a></li>
+                <li><a href="#examples">7. Ledger Examples for Trading, Manufacturing & Service Business</a></li>
+                <li><a href="#alter-delete">8. Ledger Alteration & Deletion</a></li>
+                <li><a href="#mistakes">9. Common Mistakes and Best Practices</a></li>
+                <li><a href="#revision">10. Revision Notes</a></li>
+                <li><a href="#assignment">11. Practical Assignment (Reused in Next Topics)</a></li>
+            </ul>
+        </div>
+
+        <main>
+            <section id="intro">
+                <h2>1. Introduction to Ledgers</h2>
+                <p>A <strong>ledger</strong> in Tally Prime is an individual accounting account that records debit and credit transactions. Every business transaction requires at least <strong>two ledgers</strong> — one debit and one credit.</p>
+                <p>Examples of ledgers:</p>
+                <ul>
+                    <li>Cash</li>
+                    <li>Bank</li>
+                    <li>Sales</li>
+                    <li>Purchase</li>
+                    <li>Customer accounts</li>
+                    <li>Supplier accounts</li>
+                    <li>Expenses</li>
+                    <li>Income accounts</li>
+                </ul>
+                <p>In accounting terminology, the <strong>ledger is the final destination of all transactions</strong>. In Tally Prime, ledgers are organized under predefined groups, which determine how they behave in financial statements.</p>
+            </section>
+
+            <section id="purpose">
+                <h2>2. Purpose of Ledgers in Accounting</h2>
+                <ul>
+                    <li><strong>Accurate Classification</strong> of Transactions</li>
+                    <li><strong>Preparation of Financial Reports</strong>: Trial Balance, P&L, Balance Sheet, Cash & Bank Summary</li>
+                    <li><strong>Business Analysis</strong>: Expense tracking, Debtor/Creditor management, Bank reconciliation</li>
+                    <li><strong>Automation in Tally</strong>: Auto-update inventory, outstanding reports, cost of goods sold</li>
+                </ul>
+            </section>
+
+            <section id="groups">
+                <h2>3. Ledger Groups in Tally Prime</h2>
+                <p>Every ledger must belong to a group. Tally has <strong>28 predefined groups</strong>.</p>
+                <table>
+                    <tr><th>Category</th><th>Important Groups</th></tr>
+                    <tr><td>Assets</td><td>Cash-in-Hand, Bank Accounts, Current Assets, Fixed Assets</td></tr>
+                    <tr><td>Liabilities</td><td>Capital Account, Current Liabilities, Duties & Taxes</td></tr>
+                    <tr><td>Income</td><td>Direct Income, Indirect Income, Sales Accounts</td></tr>
+                    <tr><td>Expenses</td><td>Direct Expenses, Indirect Expenses, Purchase Accounts</td></tr>
+                </table>
+                <p>Correct grouping ensures accurate financial statements.</p>
+            </section>
+
+            <section id="rules">
+                <h2>4. Rules of Ledger Creation</h2>
+                <ol>
+                    <li>Every ledger must belong to a group</li>
+                    <li>No duplicate ledger names</li>
+                    <li>Inventory Values are Affected = <strong>Yes</strong> for Purchase & Sales ledgers</li>
+                    <li>Use <strong>Bill-by-Bill</strong> for Debtors & Creditors only</li>
+                    <li>Opening Balances are optional</li>
+                    <li>Capital is always a <strong>liability</strong></li>
+                </ol>
+            </section>
+
+            <section id="creation">
+                <h2>5. How to Create a Ledger in Tally Prime (Step-by-Step)</h2>
+                <h3>Method 1: Gateway Method</h3>
+                <ol>
+                    <li>Open Tally Prime</li>
+                    <li>Go to <strong>Chart of Accounts → Ledgers → Create</strong></li>
+                    <li>Enter Name, Group, and Properties</li>
+                    <li>Press <kbd>Ctrl + A</kbd> to save</li>
+                </ol>
+
+                <h3>Method 2: During Voucher Entry</h3>
+                <p>Type new ledger name → Tally asks “Create?” → Yes → Fill details</p>
+
+                <h3>Method 3: Multiple Ledger Creation</h3>
+                <p>Chart of Accounts → Ledgers → Create Multiple → Select group → Enter list → Save</p>
+            </section>
+
+            <section id="fields">
+                <h2>6. Ledger Creation – Field-by-Field Explanation</h2>
+                <table>
+                    <tr><th>Field</th><th>Explanation</th></tr>
+                    <tr><td>Name</td><td>Full ledger name (e.g., HDFC Bank)</td></tr>
+                    <tr><td>Alias</td><td>Optional short name</td></tr>
+                    <tr><td>Under</td><td>Select correct group</td></tr>
+                    <tr><td>Inventory Values are Affected?</td><td>Yes → Sales/Purchase<br>No → Others</td></tr>
+                    <tr><td>Maintain Balances Bill-by-Bill</td><td>Yes → Customers & Suppliers only</td></tr>
+                    <tr><td>Opening Balance</td><td>Enter only for continuing businesses</td></tr>
+                </table>
+            </section>
+
+            <section id="examples">
+                <h2>7. Ledger Examples (Business-Wise)</h2>
+                <h3>7.1 Trading Business</h3>
+                <table>
+                    <tr><th>Ledger Name</th><th>Group</th><th>Notes</th></tr>
+                    <tr><td>Cash</td><td>Cash-in-Hand</td><td>Mandatory</td></tr>
+                    <tr><td>HDFC Bank</td><td>Bank Accounts</td><td>Active bank</td></tr>
+                    <tr><td>Sales – Electronics</td><td>Sales Accounts</td><td>Inventory affected: Yes</td></tr>
+                    <tr><td>Purchase – Electronics</td><td>Purchase Accounts</td><td>Inventory affected: Yes</td></tr>
+                    <tr><td>Rahul Electronics</td><td>Sundry Debtors</td><td>Bill-by-Bill: Yes</td></tr>
+                    <tr><td>New Star Suppliers</td><td>Sundry Creditors</td><td>Bill-by-Bill: Yes</td></tr>
+                </table>
+
+                <h3>7.2 Manufacturing Business</h3>
+                <ul>
+                    <li>Raw Material Purchase → Purchase Accounts</li>
+                    <li>Wages – Direct → Direct Expenses</li>
+                    <li>Factory Power → Direct Expenses</li>
+                </ul>
+
+                <h3>7.3 Service Business</h3>
+                <ul>
+                    <li>Service Income → Direct Income</li>
+                    <li>Salary Expense → Indirect Expenses</li>
+                </ul>
+            </section>
+
+            <section id="alter-delete">
+                <h2>8. Ledger Alteration & Deletion</h2>
+                <h3>8.1 Alteration</h3>
+                <p>Chart of Accounts → Ledgers → Select → Press Enter → Modify → Save<br>
+                Shortcut in voucher: <kbd>Ctrl + Enter</kbd></p>
+
+                <h3>8.2 Deletion</h3>
+                <p>Only if <strong>no transactions</strong> exist<br>
+                Alt + D → Confirm</p>
+            </section>
+
+            <section id="mistakes">
+                <h2>9. Common Mistakes and Best Practices</h2>
+                <ul>
+                    <li>Wrong Group → Incorrect financial statements</li>
+                    <li>Inventory Affects = No for Sales/Purchase → Stock not updated</li>
+                    <li>Bill-by-Bill OFF for Debtors/Creditors → No outstanding reports</li>
+                    <li>Duplicate names → Confusion</li>
+                    <li>Incorrect opening balance → Trial balance mismatch</li>
+                </ul>
+            </section>
+
+            <section id="revision">
+                <h2>10. Revision Notes</h2>
+                <ul>
+                    <li>Ledger = individual account</li>
+                    <li>Every ledger must belong to correct group</li>
+                    <li>Inventory Affected = Yes → Sales & Purchase</li>
+                    <li>Bill-by-Bill = Yes → Debtors/Creditors</li>
+                    <li>Capital is always a liability</li>
+                    <li>Delete only unused ledgers</li>
+                </ul>
+            </section>
+
+            <section id="assignment">
+                <h2>11. Practical Assignment (Master Dataset for Entire Course)</h2>
+                <p>Create these ledgers exactly as listed. They will be reused in all future topics.</p>
+                <table>
+                    <tr><th>Ledger Name</th><th>Group</th><th>Opening Balance</th></tr>
+                    <tr><td>Cash</td><td>Cash-in-Hand</td><td>₹1000000</td></tr>
+                    <tr><td>HDFC Bank</td><td>Bank Accounts</td><td>₹100000</td></tr>
+                    <tr><td>Capital Account</td><td>Capital Account</td><td>₹50000</td></tr>
+                    <tr><td>Office Rent</td><td>Indirect Expenses</td><td>#N/A</td></tr>
+                    <tr><td>Internet Charges</td><td>Indirect Expenses</td><td>#N/A</td></tr>
+                </table>
+<table>
+    <tr>
+        <th>Ledger Name</th>
+        <th>Group</th>
+    </tr> 
+    <tr>
+        <td>Purchase order</td>
+        <td>Purchase A/c</td>
+    </tr>
+    <tr>
+        <td>Purchase Invoice</td>
+        <td>Purchase A/c</td>
+    </tr>
+    <tr>
+        <td>Purchase Return</td>
+        <td>Purchase A/c</td>
+    </tr>
+    <tr>
+        <td>Goods Received</td>
+        <td>Purchase A/c</td>
+    </tr>
+    <tr>
+        <td>Sales Order</td>
+        <td>Sales A/c</td>
+    </tr>
+    <tr>
+        <td>Sales Invoice</td>
+        <td>Sales A/c</td>
+    </tr>
+    <tr>
+        <td>Sales Return</td>
+        <td>Sales A/c</td>
+    </tr>
+    <tr>
+        <td>Goods Delivered</td>
+        <td>Sales A/c</td>
+    </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Ledger Name</th>
+    <th>Group</th>
+  </tr>             
+  <tr>
+    <td>Techno Traders</td>
+    <td>sundry creditors</td>
+  </tr>
+  <tr>
+    <td>Star Electronics</td>
+    <td>sundry creditors</td>
+  </tr>
+  <tr>
+    <td>National Distributors</td>
+    <td>sundry creditors</td>
+  </tr>
+  <tr>
+    <td>Universal Mobile Hub</td>
+    <td>sundry creditors</td>
+  </tr>
+  <tr>
+    <td>Digital World Pvt. Ltd.</td>
+    <td>sundry creditors</td>
+  </tr>
+  <tr>
+    <td>City Mobiles</td>
+    <td>sundry debtors</td>
+  </tr>
+  <tr>
+    <td>Royal Electronics</td>
+    <td>sundry debtors</td>
+  </tr>
+  <tr>
+    <td>Modern Gadget Store</td>
+    <td>sundry debtors</td>
+  </tr>
+  <tr>
+    <td>Mobile Planet</td>
+    <td>sundry debtors</td>
+  </tr>
+  <tr>
+    <td>Digital Bazaar</td>
+    <td>sundry debtors</td>
+  </tr>
+</table>
+
+                <p>This master dataset will be used throughout the course — do not skip!</p>
+            </section>
+        </main>
+
+        <div class="nav-links">
+            <a href="company-creation.html">← Previous Topic</a>
+            <a href="Inventory-creation.html">Next Topic →</a>
+        </div>
+
+<div id="footer"></div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </div>
+
+    
+<script src="../scripts.js"></script>
+</body>
+</html>

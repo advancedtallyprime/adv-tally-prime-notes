@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tally Prime: Bill-wise Details & Credit Limits</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div class="container">
+<header class="notes-header">
+    <div class="brand-box">
+        <h1>GTEC Jain Keerti Education</h1>
+        <p class="tagline">GLOBAL LEADER IN <I>IT</I> EDUCATION</p>
+    </div>
+
+    <div class="notes-meta">
+        <h2>Tally Prime Notes</h2>
+        <p class="created-by">Created by <strong>Anas Sir</strong></p>
+    </div>
+</header>
+<section id="head">
+    <h2 id="pageTitle"></h2>
+</section>
+
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>Chapter Index</h2>
+            <ul>
+                <li><a href="#intro">1. Introduction</a></li>
+                <li><a href="#theory">2. Theoretical Concepts</a></li>
+                <li><a href="#config">3. Tally Prime Configuration</a></li>
+                <li><a href="#practical">4–5. Practical Tutorial – Bill-wise Details</a></li>
+                <li><a href="#creditlimit">6. Credit Limits – Practical</a></li>
+                <li><a href="#examples">7. Professional Business Examples</a></li>
+                <li><a href="#reports">8. Reports & Verification</a></li>
+                <li><a href="#mistakes">9. Common Mistakes & Solutions</a></li>
+                <li><a href="#practice">10. Mandatory Practice Set (7 Entries)</a></li>
+                <li><a href="#summary">11. Topic Summary</a></li>
+            </ul>
+        </div>
+
+        <main>
+            <section id="intro">
+                <h2>1. Introduction</h2>
+                <p>Bill-wise Details & Credit Limits give you <strong>complete control</strong> over customer and supplier accounts:</p>
+                <ul class="highlight-list">
+                    <li>Track every invoice separately</li>
+                    <li>Know exactly which bills are pending</li>
+                    <li>Adjust advances automatically</li>
+                    <li>Prevent over-credit sales</li>
+                    <li>Generate professional statements</li>
+                </ul>
+            </section>
+
+            <section id="theory">
+                <h2>2. Theoretical Concepts</h2>
+
+                <h3>2.1 Bill-wise Details – 4 Reference Types</h3>
+                <table>
+                    <tr><th>Type</th><th>When to Use</th><th>Example</th></tr>
+                    <tr><td><strong>New Ref</strong></td><td>Creating fresh invoice</td><td>Sales Invoice SI-001</td></tr>
+                    <tr><td><strong>Against Ref</strong></td><td>Payment against old bill</td><td>Adjusting receipt to SI-001</td></tr>
+                    <tr><td><strong>Advance</strong></td><td>Money received before invoice</td><td>Customer pays ₹1L in advance</td></tr>
+                    <tr><td><strong>On Account</strong></td><td>Payment without bill reference</td><td>Customer pays ₹50K (not specified)</td></tr>
+                </table>
+
+                <h3>2.3 Credit Limits</h3>
+                <p>Maximum credit allowed to a customer.<br>
+                Tally <strong>warns</strong> when limit is crossed (does not stop voucher).</p>
+            </section>
+
+            <section id="config">
+                <h2>3. Tally Prime Configuration</h2>
+                <p><strong>Enable Bill-wise Details:</strong><br>
+                Gateway → <kbd>F11</kbd> → Accounting Features → <strong>Maintain Bill-wise Details: Yes</strong></p>
+                <p>Credit Limits → Set directly in Customer Ledger (No F11 required)</p>
+            </section>
+
+            <section id="practical">
+                <h2>4–5. Practical Tutorial – Bill-wise Details (Using ABC TRADERS)</h2>
+
+                <div class="practice-entry">
+                    <strong>5.1 Sales Invoice – New Reference</strong><br>
+                    10 Laptops @ ₹50,000 → ₹5,00,000<br>
+                    Bill Ref: <strong>SI001</strong> (New Ref)
+                </div>
+
+                <div class="practice-entry">
+                    <strong>5.2 Receipt – Against Reference</strong><br>
+                    ₹2,00,000 received → Adjust against <strong>SI001</strong><br>
+                    Outstanding → ₹3,00,000
+                </div>
+
+                <div class="practice-entry">
+                    <strong>5.3 Advance Receipt</strong><br>
+                    ₹1,00,000 advance → Ref: <strong>ADV001</strong>
+                </div>
+
+                <div class="practice-entry">
+                    <strong>5.4 Sales Invoice with Advance Adjustment</strong><br>
+                    8 Laptops → ₹4,00,000 (New Ref: SI002)<br>
+                    Adjust ₹1,00,000 from <strong>ADV001</strong><br>
+                    Net Receivable → ₹3,00,000
+                </div>
+
+                <div class="practice-entry">
+                    <strong>5.5 On Account Receipt</strong><br>
+                    ₹50,000 received → No specific bill
+                </div>
+            </section>
+
+            <section id="creditlimit">
+                <h2>6. Credit Limits – Practical</h2>
+                <p><strong>Set Credit Limit:</strong><br>
+                Alter → Customer1 → Credit Limit: <strong>₹6,00,000</strong></p>
+                <p><strong>Test Exceeding Limit:</strong><br>
+                Current outstanding ₹5L + New invoice ₹2L = ₹7L → <strong>Warning Appears</strong></p>
+            </section>
+
+            <section id="examples">
+                <h2>7. Professional Business Examples</h2>
+                <div class="grid-3">
+                    <div class="card">Trading → Monthly credit sales + partial payments</div>
+                    <div class="card">Manufacturing → Supplier credit + debit notes</div>
+                    <div class="card">Services → Project advances + milestone billing</div>
+                </div>
+            </section>
+
+            <section id="reports">
+                <h2>8. Reports & Verification</h2>
+                <ul>
+                    <li><strong>Receivables / Payables</strong> → Bill-wise, Ageing, Overdue</li>
+                    <li><strong>Ledger Outstandings</strong> → Shows advances & on-account</li>
+                    <li>Customers exceeding credit limit → Highlighted</li>
+                </ul>
+            </section>
+
+            <section id="mistakes">
+                <h2>9. Common Mistakes & Solutions</h2>
+                <table>
+                    <tr><th>Mistake</th><th>Solution</th></tr>
+                    <tr><td>Bill-wise not opening</td><td>Enable in F11 → Accounting Features</td></tr>
+                    <tr><td>Advance not adjusting</td><td>Use correct reference type</td></tr>
+                    <tr><td>No outstanding shown</td><td>Set “Maintain balances bill-by-bill: Yes” in ledger</td></tr>
+                    <tr><td>No credit warning</td><td>Check credit limit value in ledger</td></tr>
+                </table>
+            </section>
+
+            <section id="practice">
+                <h2>10. Mandatory Practice Set (7 Entries – Will Be Used in All Future Topics)</h2>
+                <p class="highlight"><strong>Do NOT change amounts or references!</strong></p>
+
+                <div class="practice-entry">
+                    <strong>Entry 1</strong> → Sales Invoice<br>
+                    Customer1 → 15 Laptops @ ₹45,000 = ₹6,75,000<br>
+                    Bill Ref: <strong>SI101</strong> (New Ref)
+                </div>
+                <div class="practice-entry">
+                    <strong>Entry 2</strong> → Receipt<br>
+                    ₹3,00,000 → Against <strong>SI101</strong>
+                </div>
+                <div class="practice-entry">
+                    <strong>Entry 3</strong> → Advance Receipt<br>
+                    ₹1,50,000 → Ref: <strong>ADV101</strong>
+                </div>
+                <div class="practice-entry">
+                    <strong>Entry 4</strong> → Sales Invoice<br>
+                    ₹5,00,000 → Adjust ₹1,50,000 from ADV101<br>
+                    New Ref: <strong>SI102</strong>
+                </div>
+                <div class="practice-entry">
+                    <strong>Entry 5</strong> → On Account Receipt<br>
+                    ₹40,000 (no reference)
+                </div>
+                <div class="practice-entry">
+                    <strong>Entry 6</strong> → Set Credit Limit<br>
+                    Customer1 → ₹7,00,000
+                </div>
+                <div class="practice-entry">
+                    <strong>Entry 7</strong> → Test Exceeding Limit<br>
+                    Create ₹3,00,000 invoice → Observe warning
+                </div>
+            </section>
+
+            <section id="summary">
+                <h2>11. Topic Summary</h2>
+                <ul class="highlight-list">
+                    <li>✔ Mastered 4 Bill-wise reference types</li>
+                    <li>✔ Advance adjustment in sales invoices</li>
+                    <li>✔ Credit limit warning system</li>
+                    <li>✔ Professional outstanding reports</li>
+                    <li>✔ 7 connected practice entries ready for next topics</li>
+                </ul>
+                <p class="highlight" style="font-size: 1.4rem; margin-top: 20px;">
+                    You now have complete control over customer credit & collections!
+                </p>
+            </section>
+        </main>
+
+        <div class="nav-links">
+            <a href="../Tally-Prime-with-Accounts-&-Inventory-Vouchers/Assignment-1.html">← Previous Assignment</a>
+            <a href="Cost-Centre-&-Cost-Category-&-cost-class-(Project-Profitability).html">Next Topic →</a>
+        </div>
+
+<footer class="notes-footer">
+    <p>© 2025 GTEC Jain Keerti Education | Notes Prepared by <strong>Anas Sir</strong></p>
+    <p class="small">For Training & Educational Use Only</p>
+</footer>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </div>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Pay Heads (Basic, Hra, Pf, ESI)</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <div id="header"></div>
+        <section id="head">
+            <h2 id="pageTitle"></h2>
+        </section>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>Chapter Index</h2>
+            <ul>
+                <li><a href="#why">The "Why" (Real-Life Context)</a></li>
+                <li><a href="#step1">Step 1: Create Earning Pay Heads</a></li>
+                <li><a href="#step2">Step 2: Create Deduction Pay Heads (Statutory)</a></li>
+                <li><a href="#step3">Step 3: Defining Salary Details (The Link)</a></li>
+                <li><a href="#summary">Summary Table for Quick Reference</a></li>
+                <li><a href="#practice">Practice Set</a></li>
+            </ul>
+        </div>
+
+        <main>
+            <section id="why">
+                <h2>The "Why" (Real-Life Context)</h2>
+                <p>A Pay Head is like a <strong>"Rule."</strong></p>
+                <ul class="highlight-list">
+                    <li>Basic Pay is a rule based on Attendance (If you don't come, you don't get paid).</li>
+                    <li>HRA is a rule based on Calculation (Usually a % of your Basic).</li>
+                    <li>PF & ESI are rules based on Law (Statutory deductions sent to the government).</li>
+                </ul>
+            </section>
+
+            <section id="step1">
+                <h2>Step 1: Create Earning Pay Heads</h2>
+                <p>These add money to the employee's pocket.</p>
+
+                <h3>A. BASIC PAY (On Attendance)</h3>
+                <ul>
+                    <li>Navigation: Create → Payroll Masters → Pay Head</li>
+                    <li>Pay Head Type: <strong>Earnings for Employees</strong></li>
+                    <li>Income Type: <strong>Fixed</strong></li>
+                    <li>Under: <strong>Indirect Expenses</strong></li>
+                    <li>Calculation Type: <strong>On Attendance</strong></li>
+                    <li>Attendance Type: <strong>Present</strong></li>
+                    <li>Calculation Period: <strong>Months</strong> (Basis: Calendar Period)</li>
+                </ul>
+
+                <h3>B. HRA & DA (Computed Value)</h3>
+                <ul>
+                    <li>Pay Head Type: <strong>Earnings for Employees</strong></li>
+                    <li>Under: <strong>Indirect Expenses</strong></li>
+                    <li>Calculation Type: <strong>As Computed Value</strong></li>
+                    <li>Computation Info: On Specified Formula → Add Pay Head: Basic Pay</li>
+                    <li>Slab: Percentage (HRA = 20%, DA = 40%)</li>
+                </ul>
+
+                <h3>C. OVERTIME (Production Based)</h3>
+                <ul>
+                    <li>Calculation Type: <strong>On Production</strong></li>
+                    <li>Production Type: <strong>Overtime</strong> (created on Day 3)</li>
+                </ul>
+            </section>
+
+            <section id="step2">
+                <h2>Step 2: Create Deduction Pay Heads (Statutory)</h2>
+                <p>These subtract money for savings/taxes.</p>
+
+                <h3>A. PROVIDENT FUND (PF @ 12%)</h3>
+                <ul>
+                    <li>Pay Head Type: <strong>Employee's Statutory Deductions</strong></li>
+                    <li>Statutory Pay Type: <strong>PF Account (A/c No. 1)</strong></li>
+                    <li>Under: <strong>Current Liabilities</strong></li>
+                    <li>Calculation Type: <strong>As Computed Value</strong></li>
+                    <li>Computation Info: On Specified Formula → Basic Pay</li>
+                    <li>Value: <strong>12%</strong></li>
+                </ul>
+
+                <h3>B. ESIC (@ 3%)</h3>
+                <ul>
+                    <li>Pay Head Type: <strong>Employee's Statutory Deductions</strong></li>
+                    <li>Statutory Pay Type: <strong>Employee State Insurance</strong></li>
+                    <li>Under: <strong>Current Liabilities</strong></li>
+                    <li>Calculation Type: <strong>As Computed Value</strong></li>
+                    <li>Computation Info: On Specified Formula → Basic Pay + DA</li>
+                    <li>Value: <strong>3%</strong></li>
+                </ul>
+            </section>
+
+            <section id="step3">
+                <h2>Step 3: Defining Salary Details (The Link)</h2>
+                <p>Once the Pay Heads (Rules) are ready, link them to the Employee.</p>
+                <ol>
+                    <li>Go to Alter → Employee → Rajesh Saxena.</li>
+                    <li>Set <strong>Define Salary Details</strong> to <strong>Yes</strong>.</li>
+                    <li>Enter components:
+                        <ul>
+                            <li>Basic: ₹20,000</li>
+                            <li>Bonus: ₹1,000</li>
+                            <li>Overtime: ₹50 (Rate per hour)</li>
+                            <li>HRA, DA, PF, ESIC will show "Auto" (computed)</li>
+                        </ul>
+                    </li>
+                </ol>
+            </section>
+
+            <section id="summary">
+                <h2>Summary Table for Quick Reference</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>Pay Head</th><th>Type</th><th>Calculation Basis</th><th>Under (Ledger Group)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Basic</td><td>Earning</td><td>On Attendance</td><td>Indirect Expenses</td></tr>
+                            <tr><td>HRA</td><td>Earning</td><td>20% of Basic</td><td>Indirect Expenses</td></tr>
+                            <tr><td>Overtime</td><td>Earning</td><td>On Production</td><td>Indirect Expenses</td></tr>
+                            <tr><td>PF</td><td>Deduction</td><td>12% of Basic</td><td>Current Liabilities</td></tr>
+                            <tr><td>ESIC</td><td>Deduction</td><td>3% of (Basic + DA)</td><td>Current Liabilities</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="practice">
+                <h2>Practice Set</h2>
+                <p class="important">Scenario: The company decides to give a <strong>Transport Allowance (TA)</strong> of 10% on Basic Pay.</p>
+                <ol>
+                    <li>Create a Pay Head named <strong>"Transport Allowance"</strong>.</li>
+                    <li>Set it as <strong>"Earnings"</strong> and <strong>"As Computed Value"</strong>.</li>
+                    <li>Add it to Amit Verma's (Employee 3) salary details.</li>
+                </ol>
+            </section>
+        </main>
+
+        <!-- Navigation Links -->
+        <div class="nav-links">
+            <a href="Employee-Master.html">← Previous Topic</a>
+            <a href="Salary-Processing-&-Payslip.html">Next Topic →</a>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer"></div>
+
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </div>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>

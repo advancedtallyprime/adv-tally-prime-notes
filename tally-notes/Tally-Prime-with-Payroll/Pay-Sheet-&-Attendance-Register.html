@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Sheet & Attendance Register</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <div id="header"></div>
+        <section id="head">
+            <h2 id="pageTitle"></h2>
+        </section>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>Chapter Index</h2>
+            <ul>
+                <li><a href="#why">The "Why" (Real-Life Context)</a></li>
+                <li><a href="#paysheet">Step 1: The Pay Sheet (The "Master" Report)</a></li>
+                <li><a href="#attendance">Step 2: The Attendance Register</a></li>
+                <li><a href="#export">Step 3: Exporting and Printing</a></li>
+                <li><a href="#summary">Summary of Key Reports</a></li>
+                <li><a href="#practice">Practice Exercise</a></li>
+            </ul>
+        </div>
+
+        <main>
+            <section id="why">
+                <h2>The "Why" (Real-Life Context)</h2>
+                <p>Day 6 is about moving from individual records to <strong>Bulk Reporting</strong>. While a Payslip is for the employee, the Pay Sheet and Attendance Register are for the management and auditors. These reports allow you to see the <strong>"Big Picture"</strong> of your company's monthly expenses.</p>
+                <ul class="highlight-list">
+                    <li><strong>Pay Sheet:</strong> Used for fund planning (e.g., "We need ₹5,00,000 in the bank by the 30th to cover all salaries").</li>
+                    <li><strong>Attendance Register:</strong> Used for auditing (e.g., "Why did the overtime cost double this month? Let's check who worked extra hours").</li>
+                </ul>
+            </section>
+
+            <section id="paysheet">
+                <h2>Step 1: The Pay Sheet (The "Master" Report)</h2>
+                <p>The Pay Sheet displays all employees in rows and their various pay components (Basic, HRA, PF, etc.) in columns.</p>
+                <p><strong>Navigation:</strong> Gateway of Tally → Display More Reports → Payroll Reports → <strong>Pay Sheet</strong></p>
+                <ol>
+                    <li>Select Group: View for "All Items" or specific departments like "Marketing."</li>
+                    <li>Configuration (<kbd>F12</kbd>): Enable "Detailed" view to see the breakdown of every single pay head.</li>
+                    <li>Analysis: Look at the bottom "Grand Total" line. This tells you exactly how much the company owes in salaries versus how much is being held as PF/ESI liabilities.</li>
+                </ol>
+            </section>
+
+            <section id="attendance">
+                <h2>Step 2: The Attendance Register</h2>
+                <p>This report tracks the "Time Input" of your workforce.</p>
+                <p><strong>Navigation:</strong> Gateway of Tally → Display More Reports → Payroll Reports → <strong>Attendance Register</strong></p>
+                <ol>
+                    <li>Select the month (e.g., May).</li>
+                    <li>Tally shows a summary of days present, absent, and production (overtime) units.</li>
+                    <li><strong>Pro-Tip:</strong> If you see a discrepancy in a salary, always check the Attendance Register first. It is the "Source of Truth" for salary calculations.</li>
+                </ol>
+            </section>
+
+            <section id="export">
+                <h2>Step 3: Exporting and Printing</h2>
+                <p>In real-life scenarios, the Pay Sheet is often exported to Excel for further analysis or shared with the Finance Department.</p>
+                <ol>
+                    <li>While on the Pay Sheet, press <kbd>Ctrl + E</kbd> (Export).</li>
+                    <li>Select File Format: <strong>Excel (Spreadsheet)</strong>.</li>
+                    <li>This allows you to create charts or pivot tables based on Tally's data.</li>
+                </ol>
+            </section>
+
+            <section id="summary">
+                <h2>Summary of Key Reports</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>Report Name</th><th>Primary Use</th><th>Who uses it?</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Pay Sheet</td><td>Columnar view of all earnings/deductions</td><td>Finance/CEO</td></tr>
+                            <tr><td>Payroll Register</td><td>Monthly summary of total payroll vouchers</td><td>Accounts Manager</td></tr>
+                            <tr><td>Attendance Sheet</td><td>Employee-wise daily attendance summary</td><td>HR Dept</td></tr>
+                            <tr><td>Pay Head Employee Breakup</td><td>Shows which employees are getting a specific pay head (e.g., Bonus)</td><td>Payroll Officer</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="practice">
+                <h2>Practice Exercise</h2>
+                <ol>
+                    <li>Open your Pay Sheet for the month of May.</li>
+                    <li>Check the "Total Earning" for Amit Verma (IT Department). It should be higher than Rajesh Saxena's because of his higher Basic Pay.</li>
+                    <li>Press <kbd>F12</kbd> on the Pay Sheet and set "Show Employee Number" to Yes. Notice how it adds a professional touch to the report.</li>
+                </ol>
+            </section>
+        </main>
+
+        <!-- Navigation Links -->
+        <div class="nav-links">
+            <a href="Salary-Processing-&-Payslip.html">← Previous Topic</a>
+            <a href="PF,-ESI,-Professional-Tax-Challan.html">Next Topic →</a>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer"></div>
+
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </div>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>

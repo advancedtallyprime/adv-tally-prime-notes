@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pf, Esi, Professional Tax Challan</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <div id="header"></div>
+        <section id="head">
+            <h2 id="pageTitle"></h2>
+        </section>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>Chapter Index</h2>
+            <ul>
+                <li><a href="#why">The "Why" (Real-Life Context)</a></li>
+                <li><a href="#pf">Step 1: PF (Provident Fund) Reports & Challans</a></li>
+                <li><a href="#esi">Step 2: ESI (Employee State Insurance) Reports</a></li>
+                <li><a href="#pt">Step 3: Professional Tax (PT)</a></li>
+                <li><a href="#payment">Step 4: Statutory Payment (The Accounting Entry)</a></li>
+                <li><a href="#summary">Summary of Statutory Returns</a></li>
+                <li><a href="#practice">Final Practice Set: The Monthly Closing</a></li>
+                <li><a href="#congrats">Congratulations!</a></li>
+            </ul>
+        </div>
+
+        <main>
+            <section id="why">
+                <h2>The "Why" (Real-Life Context)</h2>
+                <p>Day 7 marks the transition from internal accounting to <strong>Government Compliance</strong>. After paying your employees, the company must deposit the deducted amounts (PF, ESI, and PT) to the respective government departments.</p>
+                <p>Deducting PF from an employee's salary is only half the job. If the company fails to deposit this money with the EPFO or ESIC by the <strong>15th of the following month</strong>, they face heavy penalties. Tally Prime generates the Challans and Computation reports automatically so you don't have to calculate them manually.</p>
+            </section>
+
+            <section id="pf">
+                <h2>Step 1: PF (Provident Fund) Reports & Challans</h2>
+                <p><strong>Navigation:</strong> Display More Reports → Payroll Reports → Statutory Reports → <strong>Provident Fund</strong></p>
+                <ul class="highlight-list">
+                    <li><strong>Combined Challan:</strong> Shows breakdown of Account No. 1 (Employee & Employer share), Account No. 2 (Admin charges), etc.</li>
+                    <li><strong>Monthly Statement:</strong> Use this to verify the PF amount for every employee before uploading to the PF portal.</li>
+                </ul>
+            </section>
+
+            <section id="esi">
+                <h2>Step 2: ESI (Employee State Insurance) Reports</h2>
+                <p><strong>Navigation:</strong> Display More Reports → Payroll Reports → Statutory Reports → <strong>Employee State Insurance</strong></p>
+                <ul class="highlight-list">
+                    <li><strong>ESI Monthly Review:</strong> Lists Gross Wages, Employee’s 0.75% contribution, Employer’s 3.25% contribution (or your custom rate).</li>
+                    <li><strong>ESI Challan:</strong> Generates data required for ESIC portal payment.</li>
+                </ul>
+            </section>
+
+            <section id="pt">
+                <h2>Step 3: Professional Tax (PT)</h2>
+                <p>Professional Tax is a state-level tax (e.g., slab-based flat rate in Maharashtra).</p>
+                <p><strong>Report:</strong> Statutory Reports → Professional Tax → <strong>Computation Report</strong></p>
+            </section>
+
+            <section id="payment">
+                <h2>Step 4: Statutory Payment (The Accounting Entry)</h2>
+                <ol>
+                    <li>Go to Vouchers → <kbd>F5</kbd> (Payment).</li>
+                    <li>Press <kbd>Ctrl + F</kbd> (Autofill).
+                        <ul>
+                            <li>Process For: <strong>Statutory Payment</strong></li>
+                            <li>Statutory Pay Type: <strong>PF</strong> (or ESI)</li>
+                            <li>Period: 1-May to 31-May</li>
+                        </ul>
+                    </li>
+                    <li>Tally auto-fills the amounts. Credit your Bank Account to complete.</li>
+                </ol>
+            </section>
+
+            <section id="summary">
+                <h2>Summary of Statutory Returns</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>Statutory Body</th><th>Common Due Date</th><th>Form/Challan in Tally</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>PF (Provident Fund)</td><td>15th of next month</td><td>Form 5, 10, 12A, ECR</td></tr>
+                            <tr><td>ESI (Insurance)</td><td>15th of next month</td><td>Monthly Statement / Challan</td></tr>
+                            <tr><td>Income Tax (TDS)</td><td>7th of next month</td><td>Form 24Q (Quarterly)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="practice">
+                <h2>Final Practice Set: The Monthly Closing</h2>
+                <ol>
+                    <li>Generate the PF Monthly Statement for May 2021.</li>
+                    <li>Confirm that the total PF amount is exactly 12% of the total "Basic Pay" shown in your Pay Sheet.</li>
+                    <li><strong>The Final Challenge:</strong> Create a Payment Voucher to pay the total salary to all employees via Bank instead of Cash.</li>
+                </ol>
+            </section>
+
+            <section id="congrats">
+                <h2>Congratulations!</h2>
+                <p class="highlight" style="font-size: 1.6rem; text-align: center; padding: 20px;">
+                    You have completed the full cycle of Tally Prime Payroll Management, from company creation to statutory filing.<br>
+                    You are now ready to handle real-world payroll like a professional!
+                </p>
+            </section>
+        </main>
+
+        <!-- Navigation Links -->
+        <div class="nav-links">
+            <a href="Pay-Sheet-&-Attendance-Register.html">← Previous Topic</a>
+            <a href="Payroll-Statutory-Reports.html">Next Topic →</a>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer"></div>
+
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </div>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>

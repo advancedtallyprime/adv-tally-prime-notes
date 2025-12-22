@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Accounting & Statutory Compliance</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <div id="header"></div>
+        <section id="head">
+            <h2 id="pageTitle"></h2>
+        </section>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>Chapter Index</h2>
+            <ul>
+                <li><a href="#intro">Welcome to Day 1</a></li>
+                <li><a href="#concept">1. Conceptual Understanding</a></li>
+                <li><a href="#setup">2. Step-by-Step Practical Setup</a></li>
+                <li><a href="#example">4. Real-Life Example</a></li>
+                <li><a href="#practice">5. Day 1 Practice Set</a></li>
+            </ul>
+        </div>
+
+        <main>
+            <section id="intro">
+                <h2>Welcome to Day 1 of your Tally Prime Payroll journey</h2>
+                <p>Today, we focus on the <strong>"Brain"</strong> of the payroll system: <strong>Statutory Compliance</strong>. In the real world, payroll isn't just about giving a salary; it’s about following government laws like Provident Fund (PF), Employee State Insurance (ESI), and Income Tax.</p>
+            </section>
+
+            <section id="concept">
+                <h2>1. Conceptual Understanding</h2>
+                <p>In India, every business with a certain number of employees must follow these rules:</p>
+                <div class="table-wrapper"><table>
+                    <thead>
+                        <tr><th>Act/Statute</th><th>What it is?</th><th>Why is it important?</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Provident Fund (PF)</td><td>Social Security/Savings</td><td>A portion of salary is saved for the employee's retirement.</td></tr>
+                        <tr><td>ESI</td><td>Health Insurance</td><td>Provides medical benefits to employees earning below a specific limit.</td></tr>
+                        <tr><td>Income Tax (TDS)</td><td>Tax on Earnings</td><td>The company must deduct tax (TDS) if the employee's income crosses the taxable limit.</td></tr>
+                        <tr><td>Professional Tax</td><td>State Tax</td><td>A small tax paid to the State Government for the privilege of working.</td></tr>
+                    </tbody>
+                </table></div>
+            </section>
+
+            <section id="setup">
+                <h2>2. Step-by-Step Practical Setup</h2>
+
+                <h3>Step A: Enable Payroll Features</h3>
+                <ol>
+                    <li>Go to Gateway of Tally → <kbd>F11: Features</kbd>.</li>
+                    <li>Under the Payroll section:
+                        <ul>
+                            <li>Set <strong>Maintain Payroll</strong> to <strong>Yes</strong>.</li>
+                            <li>Set <strong>Enable Payroll Statutory</strong> to <strong>Yes</strong>.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>Step B: Enter Statutory Details</h3>
+                <p>Once Statutory is set to Yes, a sub-screen opens. Enter the following:</p>
+                <div class="table-wrapper"><table>
+                    <tr><th>Statute</th><th>Field</th><th>Data</th></tr>
+                    <tr><td>Provident Fund (PF)</td><td>Company Code</td><td>MH/12345</td></tr>
+                    <tr><td></td><td>Company Account Group Code</td><td>12345A</td></tr>
+                    <tr><td>ESI</td><td>Company Code</td><td>27-00-123456-000-0101</td></tr>
+                    <tr><td></td><td>ESI Branch Office</td><td>Mumbai Andheri ESIC Branch</td></tr>
+                    <tr><td>Income Tax</td><td>TAN</td><td>MUMT12345B</td></tr>
+                    <tr><td></td><td>Deductor Type</td><td>Government</td></tr>
+                    <tr><td></td><td>Person Responsible</td><td>Mohammad Arif Shaikh</td></tr>
+                </table></div>
+
+                <h3>Step C: Adding Opening Capital</h3>
+                <p>Before paying salaries, the company needs money in its account.</p>
+                <div class="practice-entry">
+                    <strong>Path:</strong> Gateway of Tally → Vouchers → <kbd>F6: Receipt</kbd><br>
+                    Credit: Capital Account — ₹1,00,000<br>
+                    Debit: Cash — ₹1,00,000
+                </div>
+            </section>
+
+            <section id="example">
+                <h2>4. Real-Life Example: The "Compliance First" Rule</h2>
+                <p>Imagine you start a company called "Alpha Tech." You hire 5 people on the 1st of the month. If you haven't entered your TAN number in Tally on Day 1, Tally won't know which government department to credit the tax to when you generate the payslip at the end of the month.</p>
+                <p><strong>Statutory Setup is a one-time activity, but it controls every calculation Tally makes later.</strong></p>
+            </section>
+
+            <section id="practice">
+                <h2>5. Day 1 Practice Set</h2>
+                <ol>
+                    <li>Create a new company in Tally Prime named <strong>"Arif Payroll Services"</strong>.</li>
+                    <li>Enable Payroll and enter the following specific details:
+                        <ul>
+                            <li>PF Code: <strong>DL/99887</strong></li>
+                            <li>ESI Branch: <strong>Delhi Central</strong></li>
+                            <li>PAN: <strong>AQMPS3456L</strong> (Person Responsible)</li>
+                        </ul>
+                    </li>
+                    <li>Pass a Receipt entry for <strong>₹5,00,000</strong> as Capital to start the business.</li>
+                </ol>
+            </section>
+        </main>
+
+        <!-- Navigation Links -->
+        <div class="nav-links">
+            <a href="Journal-&-Contra.html">← Previous Topic</a>
+            <a href="Enable-Payroll-Feature.html">Next Topic →</a>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer"></div>
+
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </div>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>

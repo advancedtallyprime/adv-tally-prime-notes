@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating the Employee Master</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <div id="header"></div>
+        <section id="head">
+            <h2 id="pageTitle"></h2>
+        </section>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>Chapter Index</h2>
+            <ul>
+                <li><a href="#why">The "Why" (Real-Life Context)</a></li>
+                <li><a href="#groups">Step 1: Create Employee Groups</a></li>
+                <li><a href="#units">Step 2: Create Units (Work)</a></li>
+                <li><a href="#employee">Step 3: Creating the Individual Employee</a></li>
+                <li><a href="#attendance">Step 4: Attendance / Production Types</a></li>
+                <li><a href="#practice">Practice Exercise</a></li>
+            </ul>
+        </div>
+
+        <main>
+            <section id="why">
+                <h2>The "Why" (Real-Life Context)</h2>
+                <p>Imagine a company with 500 employees. If you want to know the total salary spent only on the "Sales" department, you can't just look at a giant list of names.</p>
+                <ul class="highlight-list">
+                    <li><strong>Groups</strong> allow you to categorize employees (Marketing, HR, etc.).</li>
+                    <li><strong>Units</strong> define how you measure their work (Days, Hours).</li>
+                    <li><strong>Employee Master</strong> stores their "Digital File"—Bank details, PAN, and Aadhaar—which is mandatory for filing government returns.</li>
+                </ul>
+            </section>
+
+            <section id="groups">
+                <h2>Step 1: Create Employee Groups</h2>
+                <p>This allows for department-wise reporting.</p>
+                <ol>
+                    <li>Go to Gateway of Tally → Create → Payroll Masters → <strong>Employee Group</strong>.</li>
+                    <li>Create the following groups:</li>
+                </ol>
+                <ul class="highlight-list">
+                    <li>Marketing</li>
+                    <li>Sales</li>
+                    <li>IT</li>
+                    <li>HR</li>
+                    <li>Finance</li>
+                </ul>
+                <p>Set <strong>Under: Primary</strong> for all.</p>
+            </section>
+
+            <section id="units">
+                <h2>Step 2: Create Units (Work)</h2>
+                <p>Before you hire someone, you must decide how to count their time.</p>
+
+                <h3>Simple Units</h3>
+                <ol>
+                    <li>Create → Payroll Masters → <strong>Unit (Work)</strong>.</li>
+                    <li>Type: Simple | Symbol: <strong>Day</strong> | Formal Name: Number of Days</li>
+                    <li>Type: Simple | Symbol: <strong>Hrs</strong> | Formal Name: Hours</li>
+                </ol>
+
+                <h3>Compound Unit</h3>
+                <ol>
+                    <li>Type: <strong>Compound</strong></li>
+                    <li>First Unit: <strong>Days</strong></li>
+                    <li>Conversion: <strong>8</strong></li>
+                    <li>Second Unit: <strong>Hrs</strong></li>
+                    <li>(Meaning: 1 Day = 8 Hours of work)</li>
+                </ol>
+            </section>
+
+            <section id="employee">
+                <h2>Step 3: Creating the Individual Employee</h2>
+                <p>Navigation: Gateway of Tally → Create → <strong>Employee</strong></p>
+                <p><strong>Example: Rajesh Saxena</strong></p>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>Section</th><th>Field</th><th>Value</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>General</td><td>Name</td><td>Rajesh Saxena</td></tr>
+                            <tr><td></td><td>Under</td><td>Marketing</td></tr>
+                            <tr><td></td><td>Date of Joining</td><td>1-Apr-2021</td></tr>
+                            <tr><td>Payment</td><td>Bank Details</td><td>Yes (A/c: 123456767788, IFSC: ABCD0123456)</td></tr>
+                            <tr><td>Statutory</td><td>PAN</td><td>ASDFG1234C</td></tr>
+                            <tr><td></td><td>Aadhaar</td><td>123456789012</td></tr>
+                            <tr><td></td><td>PF Account No</td><td>ABCD11334</td></tr>
+                            <tr><td></td><td>ESI Number</td><td>5654433</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="highlight">Pro-Tip: Date of Joining must not be earlier than Books Beginning date.</p>
+            </section>
+
+            <section id="attendance">
+                <h2>Step 4: Attendance / Production Types</h2>
+                <ol>
+                    <li>Create → <strong>Attendance/Production Type</strong>.</li>
+                </ol>
+                <ul class="highlight-list">
+                    <li>Name: <strong>Present</strong> | Under: Primary | Type: <strong>Attendance/Leave with Pay</strong></li>
+                    <li>Name: <strong>Overtime</strong> | Under: Primary | Type: <strong>Production</strong> | Unit: Days of 8 hrs</li>
+                </ul>
+            </section>
+
+            <section id="practice">
+                <h2>Practice Exercise</h2>
+                <p>Using the "All Employees Master List" in your assignment, create the profile for <strong>Employee 2: Priya Sharma</strong>.</p>
+                <ul>
+                    <li>Group: <strong>Sales</strong></li>
+                    <li>Designation: <strong>Senior Executive</strong></li>
+                    <li>Bank: HDFC (IFSC: HDFC0001234)</li>
+                    <li><strong>Challenge:</strong> Fill in her Personal Details (DOB: 22-May-1992)</li>
+                </ul>
+            </section>
+        </main>
+
+        <!-- Navigation Links -->
+        <div class="nav-links">
+            <a href="Enable-Payroll-Feature.html">← Previous Topic</a>
+            <a href="Pay-Heads-(Basic,-HRA,-PF,-ESI).html">Next Topic →</a>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer"></div>
+
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </div>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>

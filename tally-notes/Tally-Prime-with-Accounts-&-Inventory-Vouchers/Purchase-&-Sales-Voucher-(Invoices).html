@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase & Sales Voucher (Invoice Mode)</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div class="container">
+<div id="header"></div>
+
+<section id="head">
+    <h2 id="pageTitle"></h2>
+</section>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>Chapter Index</h2>
+            <ul>
+                <li><a href="#intro">1. Introduction to Purchase & Sales Invoices</a></li>
+                <li><a href="#types">2. Types of Transactions</a></li>
+                <li><a href="#ledgers">3. Key Ledgers & Items Used</a></li>
+                <li><a href="#activation">4. Activation Settings for Invoice Mode</a></li>
+                <li><a href="#purchase">5. Purchase Voucher (Invoice Mode)</a></li>
+                <li><a href="#sales">6. Sales Voucher (Invoice Mode)</a></li>
+                <li><a href="#po-tracking">7. Purchase with PO Tracking</a></li>
+                <li><a href="#so-tracking">8. Sales with SO Tracking</a></li>
+                <li><a href="#rn-tracking">9. Purchase with Receipt Note Tracking</a></li>
+                <li><a href="#dn-tracking">10. Sales with Delivery Note Tracking</a></li>
+                <li><a href="#practice">12. Practice Set – 5 Purchase + 5 Sales Entries</a></li>
+                <li><a href="#summary">13. Summary</a></li>
+            </ul>
+        </div>
+
+        <main>
+            <section id="intro">
+                <h2>1. Introduction to Purchase & Sales Invoices</h2>
+                <p>Purchase & Sales Vouchers in <strong>Invoice Mode</strong> allow item-wise billing with full integration of:</p>
+                <ul>
+                    <li>Stock Quantity & Rate</li>
+                    <li>Godown Tracking</li>
+                    <li>Order & Delivery/Receipt Note Linking</li>
+                    <li>Discounts & Narration</li>
+                </ul>
+                <p>They update <strong>both Accounts and Inventory</strong> simultaneously.</p>
+            </section>
+
+            <section id="types">
+                <h2>2. Types of Transactions Supported</h2>
+                <ul>
+                    <li><strong>Trading</strong>: Buy & sell finished goods</li>
+                    <li><strong>Manufacturing</strong>: Raw → Finished Goods</li>
+                    <li><strong>Service</strong>: Sell services + consumables</li>
+                </ul>
+            </section>
+
+            <section id="ledgers">
+                <h2>3. Key Ledgers & Items (Master Data – Reused)</h2>
+                <p><strong>Party Ledgers:</strong> Star Mobiles, Techno Wholesale (Suppliers) | Bright Traders, Green Retailer (Customers)</p>
+                <p><strong>Accounting Ledgers:</strong> Purchase A/c, Sales A/c, Round Off</p>
+                <p><strong>Stock Items:</strong></p>
+                <ul>
+                    <li>iPhone 13</li>
+                    <li>Samsung A25</li>
+                    <li>Dell Inspiron Laptop</li>
+                    <li>HP LaserJet Printer</li>
+                    <li>Mi Powerbank 10000mAh</li>
+                </ul>
+                <p><strong>Unit:</strong> Nos</p>
+            </section>
+
+            <section id="activation">
+                <h2>4. Activation Settings for Full Invoice Mode</h2>
+                <p><strong>F11 → Accounting Features:</strong></p>
+                <ul>
+                    <li>Integrate Accounts with Inventory → Yes</li>
+                    <li>Bill-wise Details → Yes</li>
+                    <li>Order Processing → Yes</li>
+                    <li>Tracking Numbers → Yes</li>
+                </ul>
+                <p><strong>F11 → Inventory Features:</strong> Integrate Accounts with Inventory → Yes</p>
+                <p><strong>F12 (in Voucher):</strong> Use Invoice Mode → Yes</p>
+                <p><strong>Shortcut in Voucher:</strong> <kbd>Ctrl + H</kbd> → Change to <strong>Invoice Mode</strong></p>
+            </section>
+
+            <section id="purchase">
+                <h2>5. Purchase Voucher (Invoice Mode) – F9</h2>
+                <p><strong>Accounting Effect:</strong> Dr. Purchase A/c | Cr. Supplier | Stock ↑</p>
+                <p><strong>Steps:</strong> F9 → Ctrl+H (Invoice) → Supplier → Purchase Ledger → Enter Items → Save</p>
+            </section>
+
+            <section id="sales">
+                <h2>6. Sales Voucher (Invoice Mode) – F8</h2>
+                <p><strong>Accounting Effect:</strong> Dr. Customer | Cr. Sales A/c | Stock ↓</p>
+                <p><strong>Steps:</strong> F8 → Ctrl+H (Invoice) → Customer → Sales Ledger → Enter Items → Save</p>
+            </section>
+
+            <section id="po-tracking">
+                <h2>7. Purchase with PO Tracking</h2>
+                <p>During Purchase Invoice → Press <kbd>Alt + O</kbd> → Select Purchase Order → Items auto-load</p>
+            </section>
+
+            <section id="so-tracking">
+                <h2>8. Sales with SO Tracking</h2>
+                <p>In Sales Invoice → <kbd>Alt + O</kbd> → Select Sales Order → Items auto-fill</p>
+            </section>
+
+            <section id="rn-tracking">
+                <h2>9. Purchase with Receipt Note Tracking</h2>
+                <p>In Purchase Invoice → Tracking No. → Select Receipt Note → Avoids double stock entry</p>
+            </section>
+
+            <section id="dn-tracking">
+                <h2>10. Sales with Delivery Note Tracking</h2>
+                <p>In Sales Invoice → Tracking No. → Select Delivery Note → Stock already reduced</p>
+            </section>
+
+<section id="practice">
+    <h2>12. Practice Set – 5 Purchase + 5 Sales Entries (MUST CREATE EXACTLY)</h2>
+    <p class="highlight"><strong>These entries will be used in upcoming topics (Debit/Credit Notes, Payments, Reports)</strong></p>
+
+    <h3>5 PURCHASE VOUCHERS (Invoice Mode)</h3>
+    <div class="practice-entry">
+        <strong>P1</strong> → Techno Traders<br>
+        • Samsung A15 – 10 Nos @ ₹12,500 <br>
+        • JBL Earphones – 18 Nos @ ₹650 <br>
+        <strong>Total:</strong> ₹136,700
+    </div>
+    <div class="practice-entry">
+        <strong>P2</strong> → Star Electronics <br>
+        • Vivo Y17 – 14 Nos @ ₹14,800 <br>
+        <strong>Total:</strong> ₹207,200 <br>
+    </div>
+    <div class="practice-entry">
+        <strong>P3</strong> → National Distributors <br>
+        • Boat Headphones – 22 Nos @ ₹1,150 <br>
+        • JBL Earphones – 40 Nos @ ₹650 <br>
+        <strong>Total:</strong> ₹51,300
+    </div>
+    <div class="practice-entry">
+        <strong>P4</strong> → Universal Mobile Hub <br>
+        • Samsung A15 – 3 Nos @ ₹12,500 <br>
+        • Vivo Y17 – 3 Nos @ ₹14,800 <br>
+        <strong>Total:</strong> ₹81,900
+    </div>
+    <div class="practice-entry">
+        <strong>P5</strong> → Digital World Pvt. Ltd. <br>
+        • Boat Headphones – 26 Nos @ ₹1,150 <br>
+        <strong>Total:</strong> ₹29,900
+    </div>
+
+    <h3>5 SALES VOUCHERS (Invoice Mode)</h3>
+    <div class="practice-entry">
+        <strong>S1</strong> → City Mobiles <br>
+        • Vivo Y17 – 5 Nos @ ₹16,000 <br>
+        • JBL Earphones – 7 Nos @ ₹900 <br>
+        <strong>Total:</strong> ₹86,100
+    </div>
+    <div class="practice-entry">
+        <strong>S2</strong> → Royal Electronics <br>
+        • Samsung A15 – 11 Nos @ ₹14,200 <br>
+        <strong>Total:</strong> ₹156,200
+    </div>
+    <div class="practice-entry">
+        <strong>S3</strong> → Modern Gadget Store <br>
+        • Boat Headphones – 18 Nos @ ₹1,550 <br>
+        • JBL Earphones – 25 Nos @ ₹900 <br>
+        <strong>Total:</strong> ₹50,400
+    </div>
+    <div class="practice-entry">
+        <strong>S4</strong> → Mobile Planet <br>
+        • Samsung A15 – 2 Nos @ ₹14,200 <br>
+        • Vivo Y17 – 2 Nos @ ₹16,000 <br>
+        <strong>Total:</strong> ₹60,400
+    </div>
+    <div class="practice-entry">
+        <strong>S5</strong> → Digital Bazaar <br>
+        • Boat Headphones – 18 Nos @ ₹1,550 <br>
+        • JBL Earphones – 25 Nos @ ₹900 <br>
+        <strong>Total:</strong> ₹50,400
+    </div>
+</section>
+
+
+            <section id="summary">
+                <h2>13. Summary</h2>
+                <div class="table-wrapper"><table>
+                    <tr><th>Voucher</th><th>Effect</th><th>Linked With</th></tr>
+                    <tr><td>Purchase Invoice</td><td>Stock ↑ | Purchase ↑</td><td>PO, Receipt Note</td></tr>
+                    <tr><td>Sales Invoice</td><td>Stock ↓ | Sales ↑</td><td>SO, Delivery Note</td></tr>
+                </table></div>
+                <p><strong>Always use Invoice Mode (Ctrl+H)</strong> for item-wise billing.</p>
+            </section>
+        </main>
+
+        <div class="nav-links">
+            <a href="Rejection-In-&-Rejection-Out.html">← Previous Topic</a>
+            <a href="Debit-Note-&-CreditNote.html">Next Topic →</a>
+        </div>
+
+<div id="footer"></div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </div>
+<script src="../scripts.js"></script>
+</body>
+</html>
